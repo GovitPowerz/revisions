@@ -1,0 +1,23 @@
+{
+  "matieres": [
+    {
+      "id": "maths",
+      "titre": "Maths",
+      "themes": []
+    },
+    {
+      "id": "physique-chimie",
+      "titre": "Physique-chimie",
+      "themes": [
+        {
+          "id": "dosages-spectres-ir",
+          "titre": "Dosages par étalonnage et spectres IR",
+          "niveau": "Terminale spécialité",
+          "description": "Loi de Beer-Lambert, loi de Kohlrausch, dilution, titre massique, groupes caractéristiques et spectroscopie infrarouge.",
+          "questions": 20,
+          "fichier": "quiz/physique-chimie/dosages-spectres-ir.json"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,236 @@
+{
+  "titre": "Dosages par étalonnage et spectres IR",
+  "niveau": "Terminale, spécialité physique-chimie",
+  "questions": [
+    {
+      "categorie": "Dosages par étalonnage",
+      "question": "Qu'est-ce qui caractérise un dosage par étalonnage ?",
+      "reponses": [
+        "On compare une grandeur physique mesurée sur l'échantillon à celle de solutions étalons de concentrations connues",
+        "On évapore le solvant puis on pèse le résidu sec",
+        "On mesure le volume de gaz dégagé par l'échantillon",
+        "On transforme l'espèce dosée par une réaction chimique, puis on pèse le produit formé"
+      ],
+      "explication": "Le dosage par étalonnage est non destructif : on trace une courbe d'étalonnage (absorbance ou conductivité en fonction de la concentration) à partir de solutions étalons, puis on y reporte la mesure faite sur l'échantillon.",
+      "indice": "Pense au mot « étalon »."
+    },
+    {
+      "categorie": "Dosages par étalonnage",
+      "question": "Pour un dosage par étalonnage spectrophotométrique, à quelle longueur d'onde règle-t-on le spectrophotomètre ?",
+      "reponses": [
+        "Celle du maximum d'absorption de l'espèce dosée",
+        "Celle du minimum d'absorption de l'espèce dosée",
+        "Celle de la couleur perçue de la solution",
+        "N'importe laquelle, le résultat n'en dépend pas"
+      ],
+      "explication": "Au maximum d'absorption, l'absorbance est la plus grande pour une concentration donnée : la mesure est plus sensible et son incertitude relative plus faible."
+    },
+    {
+      "categorie": "Dosages par étalonnage",
+      "question": "Une solution absorbe surtout les radiations rouge-orangé, autour de 620 nm. De quelle couleur apparaît-elle ?",
+      "reponses": [
+        "Bleu-cyan",
+        "Rouge",
+        "Orange",
+        "Jaune"
+      ],
+      "explication": "Une solution a la couleur complémentaire de celle qu'elle absorbe. La couleur complémentaire du rouge-orangé est le bleu-cyan : c'est le cas d'une solution de sulfate de cuivre.",
+      "indice": "Pense aux couleurs complémentaires."
+    },
+    {
+      "categorie": "Dosages par étalonnage",
+      "question": "Une solution étalon de concentration 4,0 × 10<sup>−4</sup> mol·L<sup>−1</sup> a une absorbance A = 0,80. Dans les mêmes conditions, une solution de la même espèce a une absorbance A = 0,50. Quelle est sa concentration ?",
+      "reponses": [
+        "2,5 × 10<sup>−4</sup> mol·L<sup>−1</sup>",
+        "6,4 × 10<sup>−4</sup> mol·L<sup>−1</sup>",
+        "1,6 × 10<sup>−4</sup> mol·L<sup>−1</sup>",
+        "5,0 × 10<sup>−4</sup> mol·L<sup>−1</sup>"
+      ],
+      "explication": "D'après la loi de Beer-Lambert, A = ε·ℓ·c : l'absorbance est proportionnelle à la concentration. Donc c = 4,0 × 10<sup>−4</sup> × 0,50 / 0,80 = 2,5 × 10<sup>−4</sup> mol·L<sup>−1</sup>.",
+      "indice": "Loi de Beer-Lambert : A et c sont proportionnelles."
+    },
+    {
+      "categorie": "Dosages par étalonnage",
+      "question": "On mesure l'absorbance d'une solution dans une cuve de 1,0 cm, puis dans une cuve de 2,0 cm, à la même longueur d'onde. Que devient l'absorbance ?",
+      "reponses": [
+        "Elle double",
+        "Elle est divisée par deux",
+        "Elle ne change pas",
+        "Elle est multipliée par quatre"
+      ],
+      "explication": "Dans la loi de Beer-Lambert, A = ε·ℓ·c, l'absorbance est proportionnelle à la longueur ℓ de solution traversée par la lumière. Si ℓ double, A double. C'est pourquoi toutes les mesures d'un étalonnage se font avec des cuves identiques."
+    },
+    {
+      "categorie": "Dosages par étalonnage",
+      "question": "L'absorbance de l'échantillon est supérieure à celle de toutes les solutions étalons. Que faut-il faire ?",
+      "reponses": [
+        "Diluer l'échantillon d'un facteur connu, puis refaire la mesure",
+        "Prolonger la droite d'étalonnage au-delà du dernier point",
+        "Utiliser une cuve plus longue",
+        "Recommencer la mesure à une longueur d'onde choisie au hasard"
+      ],
+      "explication": "La proportionnalité n'est garantie que dans le domaine couvert par les solutions étalons, et la loi de Beer-Lambert n'est plus valable pour les solutions trop concentrées. On dilue l'échantillon, on lit la concentration de la solution diluée sur la droite, puis on multiplie par le facteur de dilution."
+    },
+    {
+      "categorie": "Dosages par étalonnage",
+      "question": "À partir d'une solution mère de concentration 1,0 × 10<sup>−2</sup> mol·L<sup>−1</sup>, on veut préparer 100,0 mL de solution fille de concentration 2,0 × 10<sup>−3</sup> mol·L<sup>−1</sup>. Quel volume de solution mère faut-il prélever ?",
+      "reponses": [
+        "20,0 mL",
+        "5,0 mL",
+        "50,0 mL",
+        "2,0 mL"
+      ],
+      "explication": "La quantité de matière de soluté se conserve lors d'une dilution : c<sub>mère</sub>·V<sub>mère</sub> = c<sub>fille</sub>·V<sub>fille</sub>. Donc V<sub>mère</sub> = 2,0 × 10<sup>−3</sup> × 100,0 / (1,0 × 10<sup>−2</sup>) = 20,0 mL. Le facteur de dilution vaut 5.",
+      "indice": "La quantité de matière de soluté se conserve."
+    },
+    {
+      "categorie": "Dosages par étalonnage",
+      "question": "Quelle verrerie utilise-t-on pour préparer avec précision une solution fille par dilution ?",
+      "reponses": [
+        "Une pipette jaugée et une fiole jaugée",
+        "Une éprouvette graduée et un bécher",
+        "Une pipette graduée et un erlenmeyer",
+        "Une burette graduée et un bécher"
+      ],
+      "explication": "La pipette jaugée prélève précisément le volume de solution mère, et la fiole jaugée fixe précisément le volume final de solution fille. Éprouvette, bécher et erlenmeyer sont trop imprécis."
+    },
+    {
+      "categorie": "Dosages par étalonnage",
+      "question": "Pour une solution diluée de chlorure de sodium (Na<sup>+</sup> + Cl<sup>−</sup>) de concentration c, comment s'écrit la conductivité σ d'après la loi de Kohlrausch ?",
+      "reponses": [
+        "σ = (λ<sub>Na<sup>+</sup></sub> + λ<sub>Cl<sup>−</sup></sub>) × c",
+        "σ = λ<sub>Na<sup>+</sup></sub> × λ<sub>Cl<sup>−</sup></sub> × c",
+        "σ = (λ<sub>Na<sup>+</sup></sub> − λ<sub>Cl<sup>−</sup></sub>) × c",
+        "σ = c / (λ<sub>Na<sup>+</sup></sub> + λ<sub>Cl<sup>−</sup></sub>)"
+      ],
+      "explication": "La loi de Kohlrausch additionne les contributions de tous les ions : σ = λ<sub>Na<sup>+</sup></sub>·[Na<sup>+</sup>] + λ<sub>Cl<sup>−</sup></sub>·[Cl<sup>−</sup>]. Ici [Na<sup>+</sup>] = [Cl<sup>−</sup>] = c, donc σ est proportionnelle à c : c'est ce qui permet le dosage par étalonnage conductimétrique.",
+      "indice": "Chaque ion apporte sa contribution, et les contributions s'ajoutent."
+    },
+    {
+      "categorie": "Dosages par étalonnage",
+      "question": "Dans la loi de Kohlrausch, les concentrations s'expriment en mol·m<sup>−3</sup>. Que vaut 2,0 × 10<sup>−3</sup> mol·L<sup>−1</sup> dans cette unité ?",
+      "reponses": [
+        "2,0 mol·m<sup>−3</sup>",
+        "2,0 × 10<sup>−6</sup> mol·m<sup>−3</sup>",
+        "2,0 × 10<sup>−3</sup> mol·m<sup>−3</sup>",
+        "2,0 × 10<sup>3</sup> mol·m<sup>−3</sup>"
+      ],
+      "explication": "1 m<sup>3</sup> = 1000 L, donc 1 mol·L<sup>−1</sup> = 1000 mol·m<sup>−3</sup>. Ainsi 2,0 × 10<sup>−3</sup> mol·L<sup>−1</sup> = 2,0 mol·m<sup>−3</sup>.",
+      "indice": "Un mètre cube contient 1000 litres."
+    },
+    {
+      "categorie": "Dosages par étalonnage",
+      "question": "Une solution étalon de concentration 4,0 × 10<sup>−3</sup> mol·L<sup>−1</sup> a une conductivité de 50,0 mS·m<sup>−1</sup>. Une solution inconnue de la même espèce, diluée 10 fois, a une conductivité de 35,0 mS·m<sup>−1</sup> dans les mêmes conditions. Quelle est la concentration de la solution inconnue avant dilution ?",
+      "reponses": [
+        "2,8 × 10<sup>−2</sup> mol·L<sup>−1</sup>",
+        "2,8 × 10<sup>−3</sup> mol·L<sup>−1</sup>",
+        "5,7 × 10<sup>−2</sup> mol·L<sup>−1</sup>",
+        "2,8 × 10<sup>−4</sup> mol·L<sup>−1</sup>"
+      ],
+      "explication": "La conductivité est proportionnelle à la concentration : la solution diluée a une concentration 4,0 × 10<sup>−3</sup> × 35,0 / 50,0 = 2,8 × 10<sup>−3</sup> mol·L<sup>−1</sup>. La solution de départ est 10 fois plus concentrée : 2,8 × 10<sup>−2</sup> mol·L<sup>−1</sup>.",
+      "indice": "Trouve d'abord la concentration de la solution diluée."
+    },
+    {
+      "categorie": "Dosages par étalonnage",
+      "question": "Une solution commerciale d'acide chlorhydrique a une densité d = 1,18 et un titre massique de 37 %. Sachant que M(HCl) = 36,5 g·mol<sup>−1</sup>, quelle est sa concentration en quantité de matière ?",
+      "reponses": [
+        "Environ 12 mol·L<sup>−1</sup>",
+        "Environ 10 mol·L<sup>−1</sup>",
+        "Environ 32 mol·L<sup>−1</sup>",
+        "Environ 0,012 mol·L<sup>−1</sup>"
+      ],
+      "explication": "Un litre de solution pèse 1180 g et contient 0,37 × 1180 ≈ 437 g de HCl, soit 437 / 36,5 ≈ 12 mol. Donc c ≈ 12 mol·L<sup>−1</sup>.",
+      "indice": "Calcule d'abord la masse d'un litre de solution."
+    },
+    {
+      "categorie": "Spectroscopie IR",
+      "question": "Quelle grandeur figure habituellement en abscisse d'un spectre infrarouge ?",
+      "reponses": [
+        "Le nombre d'onde, en cm<sup>−1</sup>",
+        "La longueur d'onde, en nm",
+        "La fréquence, en Hz",
+        "L'absorbance, sans unité"
+      ],
+      "explication": "Un spectre IR représente la transmittance (en %) en fonction du nombre d'onde σ = 1/λ, exprimé en cm<sup>−1</sup>, généralement entre 4000 et 500 cm<sup>−1</sup>."
+    },
+    {
+      "categorie": "Spectroscopie IR",
+      "question": "Quel est le nombre d'onde associé à un rayonnement de longueur d'onde λ = 5,0 µm ?",
+      "reponses": [
+        "2000 cm<sup>−1</sup>",
+        "200 cm<sup>−1</sup>",
+        "5000 cm<sup>−1</sup>",
+        "20 000 cm<sup>−1</sup>"
+      ],
+      "explication": "λ = 5,0 µm = 5,0 × 10<sup>−4</sup> cm, donc σ = 1/λ = 1 / (5,0 × 10<sup>−4</sup>) = 2000 cm<sup>−1</sup>.",
+      "indice": "Convertis d'abord λ en centimètres."
+    },
+    {
+      "categorie": "Spectroscopie IR",
+      "question": "Sur un spectre IR, une bande fine et intense vers 1700 – 1750 cm<sup>−1</sup> est caractéristique de quelle liaison ?",
+      "reponses": [
+        "C=O",
+        "O–H",
+        "C–H",
+        "N–H"
+      ],
+      "explication": "La liaison C=O du groupe carbonyle (aldéhydes, cétones, acides carboxyliques, esters, amides) donne une bande fine et intense entre 1650 et 1750 cm<sup>−1</sup> environ."
+    },
+    {
+      "categorie": "Spectroscopie IR",
+      "question": "Le spectre IR d'un alcool liquide pur présente une bande large et intense vers 3200 – 3400 cm<sup>−1</sup>. À quoi est due sa largeur ?",
+      "reponses": [
+        "Aux liaisons hydrogène entre les molécules d'alcool",
+        "À la présence d'une double liaison C=O",
+        "Aux nombreuses liaisons C–H de la chaîne carbonée",
+        "À la masse molaire élevée de l'alcool"
+      ],
+      "explication": "En phase condensée, les groupes O–H sont associés par liaisons hydrogène, ce qui élargit la bande et l'abaisse vers 3200 – 3400 cm<sup>−1</sup>. En phase gazeuse, la liaison O–H libre donne une bande fine vers 3600 cm<sup>−1</sup>."
+    },
+    {
+      "categorie": "Spectroscopie IR",
+      "question": "À quelle famille appartient la molécule CH<sub>3</sub>–COO–CH<sub>2</sub>–CH<sub>3</sub> ?",
+      "reponses": [
+        "Ester",
+        "Acide carboxylique",
+        "Cétone",
+        "Aldéhyde"
+      ],
+      "explication": "Le groupe –COO–C, où le carbone du C=O est lié à un oxygène lui-même lié à un carbone, est le groupe ester. Il s'agit de l'éthanoate d'éthyle."
+    },
+    {
+      "categorie": "Spectroscopie IR",
+      "question": "À quelle famille appartient la molécule CH<sub>3</sub>–CO–NH<sub>2</sub> ?",
+      "reponses": [
+        "Amide",
+        "Amine",
+        "Cétone",
+        "Acide carboxylique"
+      ],
+      "explication": "Un atome d'azote directement lié au carbone d'un groupe C=O forme le groupe amide : c'est l'éthanamide. Dans une amine, l'azote n'est pas lié à un carbonyle.",
+      "indice": "L'azote est voisin d'un C=O."
+    },
+    {
+      "categorie": "Spectroscopie IR",
+      "question": "Un spectre IR présente une bande très large entre 2500 et 3200 cm<sup>−1</sup> et une bande intense vers 1710 cm<sup>−1</sup>. Quelle molécule est compatible avec ce spectre ?",
+      "reponses": [
+        "L'acide propanoïque",
+        "Le propan-1-ol",
+        "La propanone",
+        "Le propanoate de méthyle"
+      ],
+      "explication": "La bande très large entre 2500 et 3200 cm<sup>−1</sup> est celle du O–H d'un acide carboxylique, et la bande vers 1710 cm<sup>−1</sup> celle du C=O. L'alcool n'a pas de C=O ; la cétone et l'ester n'ont pas de O–H."
+    },
+    {
+      "categorie": "Spectroscopie IR",
+      "question": "On oxyde le propan-2-ol en propanone. Que constate-t-on en comparant le spectre IR du produit à celui du réactif ?",
+      "reponses": [
+        "La bande large vers 3200 – 3400 cm<sup>−1</sup> disparaît et une bande intense apparaît vers 1715 cm<sup>−1</sup>",
+        "Une bande large apparaît vers 3200 – 3400 cm<sup>−1</sup> et la bande vers 1715 cm<sup>−1</sup> disparaît",
+        "Les bandes vers 2900 cm<sup>−1</sup> disparaissent",
+        "Les deux spectres sont identiques car les formules brutes sont proches"
+      ],
+      "explication": "L'alcool possède une liaison O–H (bande large vers 3200 – 3400 cm<sup>−1</sup>) absente de la cétone, qui possède en revanche une liaison C=O (bande intense vers 1715 cm<sup>−1</sup>). Les bandes C–H vers 2900 cm<sup>−1</sup> sont présentes dans les deux spectres."
+    }
+  ]
+}
