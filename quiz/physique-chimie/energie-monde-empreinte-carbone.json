@@ -1,0 +1,236 @@
+{
+  "titre": "L'énergie dans le monde : ressources, consommation et empreinte carbone",
+  "niveau": "Terminale générale, enseignement scientifique",
+  "questions": [
+    {
+      "categorie": "Unités d'énergie et puissance",
+      "question": "Que représente une tonne équivalent pétrole (tep) ?",
+      "reponses": [
+        "L'énergie libérée par la combustion d'une tonne de pétrole",
+        "La masse de pétrole consommée par un pays en un an",
+        "La masse de CO<sub>2</sub> dégagée par la combustion d'une tonne de pétrole",
+        "La puissance d'une centrale qui brûle une tonne de pétrole par heure"
+      ],
+      "explication": "La tep est une unité d'énergie : c'est l'énergie que produit une tonne de pétrole brûlée, soit environ 4,19 × 10<sup>10</sup> J. Elle est adaptée à l'échelle de la consommation d'un pays, souvent exprimée en Mtep (millions de tep).",
+      "indice": "C'est une unité d'énergie, pas de masse."
+    },
+    {
+      "categorie": "Unités d'énergie et puissance",
+      "question": "Pourquoi utilise-t-on le kWh ou la tep plutôt que le joule pour parler de consommation d'énergie ?",
+      "reponses": [
+        "Parce que les valeurs en joules sont des nombres immenses, peu pratiques à manipuler",
+        "Parce que le joule n'est pas une unité du Système international",
+        "Parce que le joule ne mesure que l'énergie électrique",
+        "Parce que le joule est une unité de puissance"
+      ],
+      "explication": "Le joule est bien l'unité officielle de l'énergie, mais il est minuscule à l'échelle d'un foyer ou d'un pays : la consommation mondiale de 2017 vaut environ 5,65 × 10<sup>20</sup> J. On préfère le kWh pour un foyer et la tep (ou Mtep) pour un pays."
+    },
+    {
+      "categorie": "Unités d'énergie et puissance",
+      "question": "Combien de joules vaut 1 kWh ?",
+      "reponses": [
+        "3,60 × 10<sup>6</sup> J",
+        "3,60 × 10<sup>3</sup> J",
+        "1,00 × 10<sup>3</sup> J",
+        "3,60 × 10<sup>9</sup> J"
+      ],
+      "explication": "1 kWh est l'énergie consommée par un appareil de 1 kW pendant 1 h : E = P × Δt = 1000 W × 3600 s = 3,60 × 10<sup>6</sup> J.",
+      "indice": "1 kW = 1000 W et 1 h = 3600 s."
+    },
+    {
+      "categorie": "Unités d'énergie et puissance",
+      "question": "Dans la relation E = P × Δt, quelles unités faut-il utiliser pour obtenir E en joules ?",
+      "reponses": [
+        "P en watts et Δt en secondes",
+        "P en kilowatts et Δt en heures",
+        "P en watts et Δt en heures",
+        "P en kilowatts et Δt en secondes"
+      ],
+      "explication": "Un watt correspond à un joule par seconde : avec P en W et Δt en s, E est en J. Avec P en kW et Δt en h, on obtient directement E en kWh."
+    },
+    {
+      "categorie": "Unités d'énergie et puissance",
+      "question": "Un radiateur de puissance 2,0 kW fonctionne pendant 3,0 h. Quelle énergie consomme-t-il, en joules ?",
+      "reponses": [
+        "2,2 × 10<sup>7</sup> J",
+        "6,0 × 10<sup>3</sup> J",
+        "3,6 × 10<sup>5</sup> J",
+        "6,0 J"
+      ],
+      "explication": "E = P × Δt avec P = 2,0 × 10<sup>3</sup> W et Δt = 3,0 × 3600 = 1,08 × 10<sup>4</sup> s, donc E = 2,16 × 10<sup>7</sup> J ≈ 2,2 × 10<sup>7</sup> J. On peut aussi calculer 2,0 kW × 3,0 h = 6,0 kWh, puis multiplier par 3,60 × 10<sup>6</sup> J.",
+      "indice": "Convertis la puissance en watts et la durée en secondes."
+    },
+    {
+      "categorie": "Unités d'énergie et puissance",
+      "question": "En 2017, la consommation mondiale d'énergie valait 13 511,2 Mtep. Sachant que 1 tep = 4,18 × 10<sup>10</sup> J, que vaut-elle en joules ?",
+      "reponses": [
+        "5,65 × 10<sup>20</sup> J",
+        "5,65 × 10<sup>14</sup> J",
+        "5,65 × 10<sup>17</sup> J",
+        "5,65 × 10<sup>23</sup> J"
+      ],
+      "explication": "1 Mtep = 10<sup>6</sup> tep = 4,18 × 10<sup>16</sup> J. Donc 13 511,2 × 4,18 × 10<sup>16</sup> = 5,65 × 10<sup>20</sup> J. Oublier le préfixe méga donne un résultat un million de fois trop petit.",
+      "indice": "Le préfixe M signifie méga : 10<sup>6</sup>."
+    },
+    {
+      "categorie": "Unités d'énergie et puissance",
+      "question": "Un foyer consomme 4500 kWh d'électricité par an. Sachant que 1 kWh = 3,60 × 10<sup>6</sup> J et 1 tep = 4,2 × 10<sup>10</sup> J, que vaut cette consommation en tep ?",
+      "reponses": [
+        "Environ 0,39 tep",
+        "Environ 2,6 tep",
+        "Environ 3,9 tep",
+        "Environ 0,039 tep"
+      ],
+      "explication": "En joules : 4500 × 3,60 × 10<sup>6</sup> = 1,62 × 10<sup>10</sup> J. En tep : 1,62 × 10<sup>10</sup> / (4,2 × 10<sup>10</sup>) ≈ 0,39 tep.",
+      "indice": "Passe par les joules : kWh → J → tep."
+    },
+    {
+      "categorie": "Énergie primaire et ressources",
+      "question": "Qu'appelle-t-on énergie primaire ?",
+      "reponses": [
+        "L'énergie prélevée dans la nature, avant toute transformation",
+        "L'énergie livrée à l'utilisateur, par exemple l'électricité à la prise",
+        "L'énergie perdue pendant le transport de l'électricité",
+        "L'énergie produite uniquement par les ressources renouvelables"
+      ],
+      "explication": "L'énergie primaire est celle des ressources prélevées dans la nature : pétrole brut, charbon, uranium, rayonnement solaire, vent. C'est l'énergie totale, pertes comprises entre la production et l'utilisation."
+    },
+    {
+      "categorie": "Énergie primaire et ressources",
+      "question": "Pour un même usage, pourquoi l'énergie primaire consommée est-elle toujours supérieure à l'énergie finale (appelée aussi secondaire dans le cours) ?",
+      "reponses": [
+        "Parce qu'une partie de l'énergie est perdue lors des transformations et du transport",
+        "Parce que l'énergie finale ne compte pas l'électricité",
+        "Parce que l'énergie primaire inclut l'énergie dépensée par les autres pays",
+        "Parce que l'énergie finale se mesure dans une unité plus grande"
+      ],
+      "explication": "L'énergie finale est celle que consomme réellement l'utilisateur. Pour la lui fournir, il faut transformer et transporter l'énergie primaire, avec des pertes à chaque étape (surtout sous forme de chaleur). Énergie primaire = énergie finale + pertes."
+    },
+    {
+      "categorie": "Énergie primaire et ressources",
+      "question": "Parmi ces ressources, laquelle est une énergie primaire de stock ?",
+      "reponses": [
+        "L'uranium",
+        "Le rayonnement solaire",
+        "Le flux géothermique",
+        "Les marées"
+      ],
+      "explication": "Les énergies de stock sont les énergies non renouvelables : combustibles fossiles (pétrole, gaz naturel, charbon) et combustibles fissiles (uranium). Le rayonnement solaire, le flux géothermique et les marées sont des énergies de flux.",
+      "indice": "L'une de ces ressources est un combustible fissile."
+    },
+    {
+      "categorie": "Énergie primaire et ressources",
+      "question": "Qu'est-ce qui distingue une énergie de flux d'une énergie de stock ?",
+      "reponses": [
+        "Une énergie de flux se renouvelle en permanence, une énergie de stock existe en quantité limitée",
+        "Une énergie de flux est toujours électrique, une énergie de stock est toujours thermique",
+        "Une énergie de flux émet du CO<sub>2</sub>, une énergie de stock n'en émet pas",
+        "Une énergie de flux doit être transportée par bateau, une énergie de stock est consommée sur place"
+      ],
+      "explication": "Les énergies de flux (solaire, géothermie, marées) sont renouvelables : la nature les fournit en continu. Les énergies de stock (fossiles et fissiles) se sont constituées sur des temps très longs : leurs réserves sont limitées et s'épuisent."
+    },
+    {
+      "categorie": "Énergie primaire et ressources",
+      "question": "Quelle est l'origine de l'énergie des marées ?",
+      "reponses": [
+        "L'attraction gravitationnelle exercée par la Lune et le Soleil",
+        "La chaleur interne de la Terre",
+        "Le rayonnement solaire qui chauffe les océans",
+        "Le vent qui pousse la surface de la mer"
+      ],
+      "explication": "Les marées sont dues à la puissance gravitationnelle : l'attraction de la Lune et du Soleil déforme les océans. C'est une énergie de flux, donc renouvelable. La chaleur interne de la Terre est à l'origine du flux géothermique."
+    },
+    {
+      "categorie": "Consommation mondiale",
+      "question": "En 2017, le pétrole représente 34,2 % de l'énergie consommée dans le monde, le charbon 27,6 % et le gaz naturel 23,4 %. Quelle est la part des énergies fossiles ?",
+      "reponses": [
+        "85,2 %",
+        "61,8 %",
+        "57,6 %",
+        "34,2 %"
+      ],
+      "explication": "Les trois combustibles fossiles sont le pétrole, le charbon et le gaz naturel : 34,2 + 27,6 + 23,4 = 85,2 %. Les combustibles fossiles dominent largement parmi les ressources d'énergie.",
+      "indice": "Le gaz naturel est aussi un combustible fossile."
+    },
+    {
+      "categorie": "Consommation mondiale",
+      "question": "Comment a évolué la consommation mondiale d'énergie primaire au cours des 40 dernières années ?",
+      "reponses": [
+        "Elle a doublé",
+        "Elle est restée stable",
+        "Elle a été divisée par deux",
+        "Elle a été multipliée par dix"
+      ],
+      "explication": "La consommation mondiale d'énergie primaire a doublé en 40 ans. Cette croissance est directement liée au modèle industriel de production et de consommation des sociétés."
+    },
+    {
+      "categorie": "Consommation mondiale",
+      "question": "En moyenne mondiale, quel secteur consomme nettement moins d'énergie que les trois autres ?",
+      "reponses": [
+        "Le secteur agricole",
+        "Le secteur industriel",
+        "Les transports",
+        "L'habitat"
+      ],
+      "explication": "L'énergie est utilisée à parts comparables par l'industrie, les transports et l'habitat, et dans une faible mesure par le secteur agricole. Connaître les secteurs les plus consommateurs permet de cibler les efforts de réduction."
+    },
+    {
+      "categorie": "Consommation mondiale",
+      "question": "Quels sont les deux principaux inconvénients des combustibles fossiles ?",
+      "reponses": [
+        "Leurs stocks sont limités et leur combustion libère des gaz à effet de serre",
+        "Ils sont rares en France et difficiles à stocker",
+        "Ils ne produisent de l'énergie que par intermittence et ne se transportent pas",
+        "Ils libèrent peu d'énergie et produisent des déchets radioactifs"
+      ],
+      "explication": "Les combustibles fossiles sont non renouvelables, donc leurs stocks sont limités, et leur combustion libère une quantité importante de gaz à effet de serre qui affectent le climat. D'où les deux défis : réduire leur utilisation en développant d'autres énergies, et répartir plus équitablement la consommation mondiale."
+    },
+    {
+      "categorie": "Combustion et empreinte carbone",
+      "question": "Qu'est-ce qu'une combustion complète ?",
+      "reponses": [
+        "Une transformation exothermique entre un combustible et le dioxygène, qui produit de l'eau et du dioxyde de carbone",
+        "Une transformation endothermique entre un combustible et le dioxygène, qui produit de l'eau et du dioxyde de carbone",
+        "Une transformation exothermique entre un combustible et le dioxyde de carbone, qui produit de l'eau et du dioxygène",
+        "Une transformation exothermique entre un combustible et le dioxygène, qui produit du carbone et du dihydrogène"
+      ],
+      "explication": "Le combustible réagit avec un comburant, le dioxygène O<sub>2</sub>. La réaction est exothermique (elle libère de l'énergie) et, lorsqu'elle est complète, ses seuls produits sont l'eau et le dioxyde de carbone.",
+      "indice": "Exothermique : qui libère de l'énergie."
+    },
+    {
+      "categorie": "Combustion et empreinte carbone",
+      "question": "La combustion complète de l'éthanol s'écrit C<sub>2</sub>H<sub>6</sub>O + 3 O<sub>2</sub> → 2 CO<sub>2</sub> + 3 H<sub>2</sub>O. Quelle masse de CO<sub>2</sub> produit la combustion de 46 g d'éthanol ? Données : M(C<sub>2</sub>H<sub>6</sub>O) = 46 g·mol<sup>−1</sup>, M(CO<sub>2</sub>) = 44 g·mol<sup>−1</sup>.",
+      "reponses": [
+        "88 g",
+        "44 g",
+        "46 g",
+        "132 g"
+      ],
+      "explication": "46 g d'éthanol correspondent à 1,0 mol. D'après l'équation, 1 mol d'éthanol produit 2 mol de CO<sub>2</sub>, soit 2 × 44 = 88 g. La masse de CO<sub>2</sub> produite dépend de la nature du combustible.",
+      "indice": "Regarde le coefficient devant CO<sub>2</sub> dans l'équation."
+    },
+    {
+      "categorie": "Combustion et empreinte carbone",
+      "question": "Que mesure l'empreinte carbone d'un objet technologique ?",
+      "reponses": [
+        "Son impact sur le climat, de sa production jusqu'à son retraitement",
+        "La masse de carbone contenue dans ses matériaux",
+        "L'énergie électrique qu'il consomme pendant son utilisation",
+        "Le CO<sub>2</sub> émis uniquement pendant son utilisation"
+      ],
+      "explication": "L'empreinte carbone prend en compte tout le cycle de vie : on compte la masse de CO<sub>2</sub> produite directement ou indirectement par la consommation d'énergie et de matière première, de la production au retraitement. Un objet qui n'émet rien à l'usage a quand même une empreinte carbone.",
+      "indice": "Pense à tout le cycle de vie de l'objet."
+    },
+    {
+      "categorie": "Combustion et empreinte carbone",
+      "question": "Dans quelle unité exprime-t-on une empreinte carbone ?",
+      "reponses": [
+        "En kilogrammes (ou tonnes) équivalent CO<sub>2</sub>",
+        "En tonnes équivalent pétrole",
+        "En kilowattheures",
+        "En joules par seconde"
+      ],
+      "explication": "L'empreinte carbone est une masse : elle s'exprime en kg éq CO<sub>2</sub> ou en tonnes éq CO<sub>2</sub>. La tep et le kWh sont des unités d'énergie, le joule par seconde (le watt) est une unité de puissance."
+    }
+  ]
+}
