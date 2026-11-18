@@ -26,6 +26,20 @@
           "fichier": "quiz/physique-chimie/energie-monde-empreinte-carbone.json"
         }
       ]
+    },
+    {
+      "id": "svt",
+      "titre": "SVT",
+      "themes": [
+        {
+          "id": "atmosphere-terrestre-vie",
+          "titre": "L'atmosphère terrestre et la vie",
+          "niveau": "Terminale enseignement scientifique",
+          "description": "Atmosphère primitive, formation des océans, origine du dioxygène, fers rubanés et couche d'ozone.",
+          "questions": 20,
+          "fichier": "quiz/svt/atmosphere-terrestre-vie.json"
+        }
+      ]
     }
   ]
 }

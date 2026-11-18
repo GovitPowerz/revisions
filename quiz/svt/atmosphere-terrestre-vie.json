@@ -1,0 +1,235 @@
+{
+  "titre": "L'atmosphère terrestre et la vie",
+  "niveau": "Terminale, enseignement scientifique",
+  "questions": [
+    {
+      "categorie": "Formation de l'atmosphère et des océans",
+      "question": "Il y a combien de temps la Terre s'est-elle formée ?",
+      "reponses": [
+        "Environ 4,6 milliards d'années",
+        "Environ 13,8 milliards d'années",
+        "Environ 3,5 milliards d'années",
+        "Environ 500 millions d'années"
+      ],
+      "explication": "La Terre s'est formée il y a environ 4,6 milliards d'années (4,6 Ga), presque en même temps que le Soleil, par assemblage de matériaux d'un nuage de gaz et de poussières. 3,5 Ga correspond aux premières traces de vie, et 13,8 Ga à l'âge de l'Univers."
+    },
+    {
+      "categorie": "Formation de l'atmosphère et des océans",
+      "question": "D'où viennent les gaz qui ont formé l'atmosphère primitive ?",
+      "reponses": [
+        "Du dégazage du manteau de la Terre, alors en fusion",
+        "De la photosynthèse des premiers êtres vivants",
+        "De l'évaporation des océans sous l'effet du Soleil",
+        "De la combustion de roches riches en carbone"
+      ],
+      "explication": "La Terre primitive est une boule de matière en fusion : son manteau libère des gaz (dégazage) qui forment l'atmosphère primitive. La composition de ce manteau primitif était proche de celle des météorites. Les océans et la vie n'existaient pas encore.",
+      "indice": "À cette époque, il n'y a encore ni océan ni être vivant."
+    },
+    {
+      "categorie": "Formation de l'atmosphère et des océans",
+      "question": "Quelle était la composition de l'atmosphère primitive, il y a 4,6 milliards d'années ?",
+      "reponses": [
+        "Beaucoup de H<sub>2</sub>O et de CO<sub>2</sub>, un peu de N<sub>2</sub>",
+        "Environ 78 % de N<sub>2</sub> et 21 % de O<sub>2</sub>",
+        "Beaucoup de O<sub>2</sub> et d'ozone O<sub>3</sub>, un peu de CO<sub>2</sub>",
+        "Beaucoup de N<sub>2</sub> et de O<sub>2</sub>, sans H<sub>2</sub>O ni CO<sub>2</sub>"
+      ],
+      "explication": "L'atmosphère primitive était riche en vapeur d'eau H<sub>2</sub>O et en dioxyde de carbone CO<sub>2</sub>, avec une faible proportion de diazote N<sub>2</sub>. Elle ne contenait pas de dioxygène : celui-ci n'apparaîtra que bien plus tard, grâce aux êtres vivants."
+    },
+    {
+      "categorie": "Formation de l'atmosphère et des océans",
+      "question": "Quel phénomène explique la formation de l'hydrosphère (les océans) ?",
+      "reponses": [
+        "Le refroidissement de la surface, qui a liquéfié la vapeur d'eau de l'atmosphère",
+        "Le réchauffement de la surface, qui a fait fondre une épaisse couche de glace",
+        "La photosynthèse des cyanobactéries, qui a produit de grandes quantités d'eau",
+        "La dissociation du dioxygène par les UV, qui a libéré de l'eau liquide"
+      ],
+      "explication": "En se refroidissant, la surface de la Terre primitive a permis à la vapeur d'eau de l'atmosphère de passer de l'état gazeux à l'état liquide (liquéfaction). Cette eau liquide a formé l'hydrosphère, dans laquelle la vie s'est développée.",
+      "indice": "L'eau était déjà là, mais sous forme de gaz."
+    },
+    {
+      "categorie": "Formation de l'atmosphère et des océans",
+      "question": "Après la formation des océans, pourquoi la proportion de N<sub>2</sub> dans l'atmosphère a-t-elle augmenté ?",
+      "reponses": [
+        "Les teneurs en H<sub>2</sub>O et en CO<sub>2</sub> ont diminué, alors que le N<sub>2</sub> est resté",
+        "Les cyanobactéries ont fabriqué du N<sub>2</sub> par photosynthèse",
+        "Le O<sub>2</sub> de l'atmosphère s'est peu à peu transformé en N<sub>2</sub>",
+        "Les UV du Soleil ont dissocié le CO<sub>2</sub> en N<sub>2</sub>"
+      ],
+      "explication": "La vapeur d'eau a quitté l'atmosphère en se liquéfiant, et une grande partie du CO<sub>2</sub> s'est dissoute dans les océans. Le N<sub>2</sub>, lui, est resté dans l'atmosphère : sa proportion a donc augmenté « au profit » des deux autres, sans qu'il soit produit en plus.",
+      "indice": "Une proportion peut augmenter sans que la quantité change."
+    },
+    {
+      "categorie": "Formation de l'atmosphère et des océans",
+      "question": "Quelle est la composition de l'atmosphère actuelle ?",
+      "reponses": [
+        "Environ 78 % de N<sub>2</sub> et 21 % de O<sub>2</sub>, plus des traces d'autres gaz",
+        "Environ 78 % de O<sub>2</sub> et 21 % de N<sub>2</sub>, plus des traces d'autres gaz",
+        "Environ 78 % de N<sub>2</sub> et 21 % de CO<sub>2</sub>, plus des traces d'autres gaz",
+        "Environ 50 % de N<sub>2</sub> et 50 % de O<sub>2</sub>, sans aucun autre gaz"
+      ],
+      "explication": "L'atmosphère actuelle contient environ 78 % de diazote N<sub>2</sub> et 21 % de dioxygène O<sub>2</sub>. Le reste est constitué de gaz à l'état de traces, dont H<sub>2</sub>O, CO<sub>2</sub>, CH<sub>4</sub> et N<sub>2</sub>O. Le CO<sub>2</sub> ne représente qu'environ 0,04 % de l'air."
+    },
+    {
+      "categorie": "Le dioxygène",
+      "question": "De quand datent les plus anciennes traces de vie connues sur Terre ?",
+      "reponses": [
+        "D'au moins 3,5 milliards d'années",
+        "D'au moins 4,6 milliards d'années",
+        "D'environ 2,4 milliards d'années",
+        "D'environ 500 millions d'années"
+      ],
+      "explication": "Les premières traces de vie sont datées d'au moins 3,5 Ga. À ne pas confondre avec 4,6 Ga (formation de la Terre), 2,4 Ga (début de l'accumulation du O<sub>2</sub> dans l'atmosphère) et 500 Ma (teneur actuelle en O<sub>2</sub> atteinte)."
+    },
+    {
+      "categorie": "Le dioxygène",
+      "question": "Qui a produit le premier dioxygène de la Terre, et comment ?",
+      "reponses": [
+        "Des cyanobactéries, par photosynthèse",
+        "Des cyanobactéries, par respiration",
+        "Des plantes terrestres, par photosynthèse",
+        "Des volcans, par dégazage du manteau"
+      ],
+      "explication": "Les cyanobactéries sont des bactéries aquatiques qui réalisent la photosynthèse : elles utilisent l'énergie lumineuse et rejettent du O<sub>2</sub>. Elles ont aussi construit des roches en fines couches, les stromatolithes, qui témoignent de leur présence. Les plantes terrestres sont apparues beaucoup plus tard.",
+      "indice": "Les premières traces de vie sont celles de ces organismes."
+    },
+    {
+      "categorie": "Le dioxygène",
+      "question": "Les cyanobactéries produisent du O<sub>2</sub> depuis au moins 3,5 Ga. Pourquoi ne s'est-il pas accumulé tout de suite dans l'atmosphère ?",
+      "reponses": [
+        "Il était consommé dans l'océan par l'oxydation du fer",
+        "Il était absorbé par la couche d'ozone",
+        "Il était consommé par la respiration des animaux marins",
+        "Il était détruit par le CO<sub>2</sub> de l'atmosphère primitive"
+      ],
+      "explication": "Le O<sub>2</sub> produit dans l'océan a d'abord réagi avec les espèces chimiques réduites qui s'y trouvaient, en particulier le fer dissous. Tant qu'il restait du fer à oxyder, le O<sub>2</sub> était consommé sur place et ne pouvait pas s'échapper vers l'atmosphère.",
+      "indice": "Le O<sub>2</sub> est produit dans l'océan : que rencontre-t-il d'abord ?"
+    },
+    {
+      "categorie": "Le dioxygène",
+      "question": "Que sont les fers rubanés ?",
+      "reponses": [
+        "Des dépôts d'oxydes de fer formés au fond des océans",
+        "Des coulées de lave riches en fer rejetées par les volcans",
+        "Des météorites de fer tombées sur la Terre primitive",
+        "Des roches construites en fines couches par des cyanobactéries"
+      ],
+      "explication": "Quand le O<sub>2</sub> a oxydé le fer dissous dans l'océan, des oxydes de fer insolubles se sont déposés au fond en couches successives : ce sont les fers rubanés. Ils sont un indice géologique de la production de O<sub>2</sub>. Les roches construites par les cyanobactéries sont les stromatolithes."
+    },
+    {
+      "categorie": "Le dioxygène",
+      "question": "Ajuste l'équation de l'oxydation du fer par le dioxygène : … Fe + … O<sub>2</sub> → … Fe<sub>2</sub>O<sub>3</sub>. Quels sont les trois nombres, dans l'ordre ?",
+      "reponses": [
+        "4, 3 et 2",
+        "2, 3 et 1",
+        "4, 3 et 1",
+        "2, 1 et 1"
+      ],
+      "explication": "4 Fe + 3 O<sub>2</sub> → 2 Fe<sub>2</sub>O<sub>3</sub>. On vérifie la conservation des éléments : 4 atomes de fer de chaque côté (2 × 2 à droite) et 6 atomes d'oxygène de chaque côté (3 × 2 à gauche, 2 × 3 à droite).",
+      "indice": "Commence par l'oxygène : il faut un nombre pair d'atomes à droite."
+    },
+    {
+      "categorie": "Le dioxygène",
+      "question": "À partir de quand le dioxygène s'est-il accumulé dans l'atmosphère ?",
+      "reponses": [
+        "Il y a 2,4 milliards d'années",
+        "Il y a 4,6 milliards d'années",
+        "Il y a 3,5 milliards d'années",
+        "Il y a 500 millions d'années"
+      ],
+      "explication": "Une fois toutes les espèces réduites de l'océan oxydées, la concentration en O<sub>2</sub> a augmenté dans l'eau, puis le O<sub>2</sub> s'est échappé vers l'atmosphère, il y a 2,4 Ga. Il s'est donc écoulé plus d'un milliard d'années entre les premières cyanobactéries et cette accumulation."
+    },
+    {
+      "categorie": "Le dioxygène",
+      "question": "Depuis quand la teneur de l'atmosphère en O<sub>2</sub> est-elle à son niveau actuel (21 %) ?",
+      "reponses": [
+        "Depuis 500 millions d'années environ",
+        "Depuis 2,4 milliards d'années environ",
+        "Depuis 3,5 milliards d'années environ",
+        "Depuis la révolution industrielle"
+      ],
+      "explication": "Le O<sub>2</sub> a commencé à s'accumuler dans l'atmosphère il y a 2,4 Ga, mais sa concentration actuelle de 21 % n'a été atteinte qu'il y a 500 millions d'années environ."
+    },
+    {
+      "categorie": "Le dioxygène",
+      "question": "Aujourd'hui, quels sont les principaux puits de dioxygène atmosphérique ?",
+      "reponses": [
+        "La respiration et les combustions",
+        "La photosynthèse et la respiration",
+        "La photosynthèse et les combustions",
+        "La photosynthèse et le dégazage du manteau"
+      ],
+      "explication": "Un puits consomme du O<sub>2</sub>, une source en produit. La respiration des êtres vivants et les combustions consomment du O<sub>2</sub> : ce sont des puits. La photosynthèse en produit : c'est la source. Les échanges de O<sub>2</sub> sont donc aujourd'hui surtout liés à la biosphère.",
+      "indice": "Un puits fait disparaître, une source fait apparaître."
+    },
+    {
+      "categorie": "La couche d'ozone",
+      "question": "Comment se forme une molécule d'ozone O<sub>3</sub> dans la stratosphère ?",
+      "reponses": [
+        "Un atome O, issu d'un O<sub>2</sub> dissocié par les UV, s'associe à une molécule de O<sub>2</sub>",
+        "Trois molécules de O<sub>2</sub> fusionnent en une seule sous l'effet de la chaleur du Soleil",
+        "Une molécule de CO<sub>2</sub> perd son atome de carbone sous l'effet des UV du Soleil",
+        "Une molécule de H<sub>2</sub>O perd ses atomes d'hydrogène puis capte un O<sub>2</sub>"
+      ],
+      "explication": "Sous l'action des UV, des molécules de dioxygène O<sub>2</sub> se dissocient en deux atomes d'oxygène. Chaque atome libéré se recombine avec une autre molécule de O<sub>2</sub> pour former une molécule d'ozone O<sub>3</sub>. L'ozone se forme donc à partir du dioxygène : pas de O<sub>2</sub>, pas de couche d'ozone."
+    },
+    {
+      "categorie": "La couche d'ozone",
+      "question": "À quelle altitude la concentration en ozone est-elle maximale ?",
+      "reponses": [
+        "Environ 30 km",
+        "Environ 3 km",
+        "Environ 300 km",
+        "Environ 3 000 km"
+      ],
+      "explication": "La formation d'ozone est maximale autour de 30 km d'altitude, dans la stratosphère. C'est là que se trouve la couche d'ozone, qui est permanente."
+    },
+    {
+      "categorie": "La couche d'ozone",
+      "question": "Quel est le rôle de la couche d'ozone pour les êtres vivants ?",
+      "reponses": [
+        "Elle absorbe une partie du rayonnement ultraviolet du Soleil",
+        "Elle retient la chaleur émise par la surface de la Terre",
+        "Elle produit le dioxygène nécessaire à la respiration",
+        "Elle arrête la totalité du rayonnement visible du Soleil"
+      ],
+      "explication": "La couche d'ozone absorbe une partie des UV solaires et protège ainsi les êtres vivants de leurs effets mutagènes. Retenir la chaleur de la surface, c'est l'effet de serre : un autre phénomène, dû à d'autres gaz."
+    },
+    {
+      "categorie": "La couche d'ozone",
+      "question": "Pourquoi dit-on que les ultraviolets sont mutagènes ?",
+      "reponses": [
+        "Ils sont absorbés par l'ADN et peuvent le modifier",
+        "Ils augmentent la température de la peau",
+        "Ils empêchent les cellules de respirer",
+        "Ils transforment le dioxygène en ozone"
+      ],
+      "explication": "Un agent mutagène provoque des mutations, c'est-à-dire des modifications de l'ADN. Les spectres d'absorption montrent que l'ADN absorbe dans l'ultraviolet, et que l'ozone absorbe dans le même domaine : il arrête donc une grande partie des UV dangereux avant qu'ils n'atteignent les cellules.",
+      "indice": "Dans « mutagène », il y a « mutation »."
+    },
+    {
+      "categorie": "La couche d'ozone",
+      "question": "Quel lien y a-t-il entre la couche d'ozone et le réchauffement climatique ?",
+      "reponses": [
+        "Aucun : ce sont deux phénomènes différents",
+        "Le trou dans la couche d'ozone laisse entrer plus de chaleur",
+        "Le réchauffement climatique fait fondre la couche d'ozone",
+        "Le CO<sub>2</sub> rejeté par les combustions détruit l'ozone"
+      ],
+      "explication": "C'est un piège classique. La couche d'ozone protège des UV. Le réchauffement climatique, lui, est dû à l'augmentation des gaz à effet de serre (CO<sub>2</sub>, CH<sub>4</sub>, N<sub>2</sub>O) qui retiennent le rayonnement infrarouge émis par la Terre. Ce sont deux phénomènes différents."
+    },
+    {
+      "categorie": "La couche d'ozone",
+      "question": "Pourquoi la vie, d'abord aquatique, n'a-t-elle colonisé les continents qu'après la formation de la couche d'ozone ?",
+      "reponses": [
+        "Avant, les UV qui atteignaient les continents étaient trop dangereux",
+        "Avant, les continents étaient entièrement recouverts par les océans",
+        "Avant, l'atmosphère ne contenait pas assez de diazote",
+        "Avant, la température des continents était trop basse"
+      ],
+      "explication": "Sans couche d'ozone, les UV mutagènes atteignaient la surface des continents. Dans l'océan, l'eau protégeait les êtres vivants. La couche d'ozone n'a pu se former qu'une fois le O<sub>2</sub> accumulé dans l'atmosphère : la vie a donc elle-même créé les conditions de sa sortie des eaux.",
+      "indice": "De quoi l'eau protège-t-elle les êtres vivants ?"
+    }
+  ]
+}
