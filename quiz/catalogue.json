@@ -16,6 +16,14 @@
           "description": "Loi de Beer-Lambert, loi de Kohlrausch, dilution, titre massique, groupes caractéristiques et spectroscopie infrarouge.",
           "questions": 20,
           "fichier": "quiz/physique-chimie/dosages-spectres-ir.json"
+        },
+        {
+          "id": "energie-monde-empreinte-carbone",
+          "titre": "L'énergie dans le monde : ressources, consommation et empreinte carbone",
+          "niveau": "Terminale enseignement scientifique",
+          "description": "Unités d'énergie (J, kWh, tep), relation E = P × Δt, énergie primaire et finale, énergies de stock et de flux, consommation mondiale, combustion et empreinte carbone.",
+          "questions": 20,
+          "fichier": "quiz/physique-chimie/energie-monde-empreinte-carbone.json"
         }
       ]
     }
