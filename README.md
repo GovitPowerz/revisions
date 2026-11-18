@@ -1,6 +1,6 @@
 # Révisions
 
-Quiz de révision en maths et en physique-chimie, avec la correction expliquée après chaque question.
+Quiz de révision en maths, en physique-chimie et en SVT, avec la correction expliquée après chaque question.
 
 Le site est statique : il n'y a rien à compiler. GitHub Pages sert directement les fichiers de la branche `main`.
 
