@@ -16,6 +16,7 @@ from reportlab.lib.fonts import addMapping
 from reportlab.lib.pagesizes import A4
 from reportlab.lib.styles import ParagraphStyle
 from reportlab.lib.units import cm
+from reportlab.lib.utils import ImageReader
 from reportlab.pdfbase import pdfmetrics
 from reportlab.pdfbase.ttfonts import TTFont
 from reportlab.platypus import (BaseDocTemplate, Frame, Image, KeepTogether, PageBreak, PageTemplate,
@@ -24,14 +25,14 @@ from reportlab.platypus.flowables import HRFlowable
 
 OUT = os.path.splitext(os.path.abspath(__file__))[0] + ".pdf"
 TITLE = "Probabilités, espérance, variance et loi binomiale"
-LEVEL = "Terminale spécialité maths"
+LEVEL = "Terminale, spécialité maths"
 
-NAVY = colors.HexColor("#1b2540")
-PINK = colors.HexColor("#c2185b")
-GREY = colors.HexColor("#5b6b8c")
+NAVY_HEX, PINK_HEX, GREY_HEX, BLUE_HEX = "#1b2540", "#c2185b", "#5b6b8c", "#3b6ea5"
+NAVY = colors.HexColor(NAVY_HEX)
+PINK = colors.HexColor(PINK_HEX)
+GREY = colors.HexColor(GREY_HEX)
 BOX = colors.HexColor("#eef1f6")
 LINE = colors.HexColor("#c9d1e0")
-BLUE_HEX, PINK_HEX = "#3b6ea5", "#c2185b"
 
 ttf = os.path.join(matplotlib.get_data_path(), "fonts", "ttf")
 for name, file in [("DV", "DejaVuSans.ttf"), ("DV-B", "DejaVuSans-Bold.ttf"), ("DV-I", "DejaVuSans-Oblique.ttf"),
@@ -43,8 +44,8 @@ addMapping("DV", 0, 1, "DV-I")
 addMapping("DV", 1, 1, "DV-BI")
 
 plt.rcParams.update({"mathtext.fontset": "dejavusans", "mathtext.default": "regular", "font.size": 9,
-                     "axes.edgecolor": "#5b6b8c", "axes.labelcolor": "#1b2540", "xtick.color": "#1b2540",
-                     "ytick.color": "#1b2540"})
+                     "axes.edgecolor": GREY_HEX, "axes.labelcolor": NAVY_HEX, "xtick.color": NAVY_HEX,
+                     "ytick.color": NAVY_HEX})
 
 S = {
     "title": ParagraphStyle("title", fontName="DV-B", fontSize=24, leading=29, textColor=NAVY, spaceAfter=4),
@@ -68,7 +69,12 @@ S = {
     "code": ParagraphStyle("code", fontName="DVM", fontSize=8.8, leading=12, textColor=NAVY),
 }
 
-MB, TB = "M̅", "T̅"
+def bar(x):
+    """Overlined letter: a combining overline would sit on the glyph, ReportLab does no mark positioning."""
+    return f'<u offset="0.84*F" width="0.05*F">{x}</u>'
+
+
+MB = bar("M")
 
 
 NBSP = [(" ?", "\u00a0?"), (" :", "\u00a0:"), (" ;", "\u00a0;"), (" !", "\u00a0!"), ("« ", "«\u00a0"),
@@ -77,6 +83,8 @@ NBSP = [(" ?", "\u00a0?"), (" :", "\u00a0:"), (" ;", "\u00a0;"), (" !", "\u00a0!
 
 def fr(text):
     text = re.sub(r"(ℬ\([^;()]+|\]0) ; ([^()\[]+[)\[])", "\\1\u00a0;\u00a0\\2", text)
+    # spaces inside P(...), E(...), V(...), except those inside a markup tag
+    text = re.sub(r"\b[PEV]\([^()]*\)", lambda m: re.sub(r" (?![^<>]*>)", "\u00a0", m.group(0)), text)
     for a, b in NBSP:
         text = text.replace(a, b)
     return text
@@ -108,10 +116,11 @@ def png(fig, dpi=220):
     return buf
 
 
-def img(buf, width):
-    from reportlab.lib.utils import ImageReader
+def img(buf, width=None, dpi=None):
+    """Centred image scaled to `width`, or at its true size when rendered at `dpi`."""
     w, h = ImageReader(buf).getSize()
     buf.seek(0)
+    width = width or w * 72 / dpi
     im = Image(buf, width=width, height=width * h / w)
     im.hAlign = "CENTER"
     return im
@@ -120,14 +129,8 @@ def img(buf, width):
 def F(tex, size=11):
     """Display formula rendered with matplotlib mathtext, at true point size."""
     fig = plt.figure()
-    fig.text(0, 0, f"${tex}$", fontsize=size, color="#1b2540")
-    dpi = 300
-    buf = png(fig, dpi=dpi)
-    from reportlab.lib.utils import ImageReader
-    w, h = ImageReader(buf).getSize()
-    buf.seek(0)
-    im = Image(buf, width=w * 72 / dpi, height=h * 72 / dpi)
-    im.hAlign = "CENTER"
+    fig.text(0, 0, f"${tex}$", fontsize=size, color=NAVY_HEX)
+    im = img(png(fig, dpi=300), dpi=300)
     im.spaceBefore, im.spaceAfter = 2, 6
     return im
 
@@ -146,8 +149,10 @@ def table(rows, first_col=3.2 * cm, col=1.6 * cm):
         ("VALIGN", (0, 0), (-1, -1), "MIDDLE"),
         ("TOPPADDING", (0, 0), (-1, -1), 4),
         ("BOTTOMPADDING", (0, 0), (-1, -1), 4),
+        ("NOSPLIT", (0, 0), (-1, -1)),
     ]))
-    return KeepTogether([t, Spacer(1, 10)])
+    t.spaceAfter = 10
+    return t
 
 
 def code(lines):
@@ -176,28 +181,27 @@ def tree(level1, level2, leaves=None):
     ax.set_ylim(-1.9, 1.9)
     nodes1 = [(1, 1), (1, -1)]
     for (lab, pr), (x, y) in zip(level1, nodes1):
-        ax.plot([0.05, x - 0.1], [0, y * 0.95], color="#3b6ea5", lw=1)
-        ax.text(x, y, f"${lab}$", ha="center", va="center", fontsize=11, color="#1b2540")
-        ax.text(0.5, y * 0.5 + 0.08 * (1 if y > 0 else -1), f"${pr}$", ha="right" if y > 0 else "right",
-                va="bottom" if y > 0 else "top", fontsize=9, color="#c2185b")
+        ax.plot([0.05, x - 0.1], [0, y * 0.95], color=BLUE_HEX, lw=1)
+        ax.text(x, y, f"${lab}$", ha="center", va="center", fontsize=11, color=NAVY_HEX)
+        ax.text(0.5, y * 0.5 + 0.08 * (1 if y > 0 else -1), f"${pr}$", ha="right",
+                va="bottom" if y > 0 else "top", fontsize=9, color=PINK_HEX)
         for j, (lab2, pr2) in enumerate(level2[0 if y > 0 else 1]):
             y2 = y + (0.5 if j == 0 else -0.5)
-            ax.plot([x + 0.12, 1.9], [y, y2], color="#3b6ea5", lw=1)
-            ax.text(2.0, y2, f"${lab2}$", ha="center", va="center", fontsize=11, color="#1b2540")
+            ax.plot([x + 0.12, 1.9], [y, y2], color=BLUE_HEX, lw=1)
+            ax.text(2.0, y2, f"${lab2}$", ha="center", va="center", fontsize=11, color=NAVY_HEX)
             ax.text(1.5, (y + y2) / 2 + (0.07 if j == 0 else -0.07), f"${pr2}$", ha="center",
-                    va="bottom" if j == 0 else "top", fontsize=9, color="#c2185b")
+                    va="bottom" if j == 0 else "top", fontsize=9, color=PINK_HEX)
             if leaves:
                 ax.text(2.2, y2, leaves[(0 if y > 0 else 2) + j], ha="left", va="center", fontsize=8.5,
-                        color="#5b6b8c")
-    ax.text(-0.02, 0, "", ha="right")
+                        color=GREY_HEX)
     return fig
 
 
-def bars(ks, ps, highlight=None, xlabel="k", ylabel="P(X = k)", size=(5.2, 2.3)):
-    fig, ax = plt.subplots(figsize=size)
+def bars(ks, ps, highlight=None, ylabel="P(X = k)"):
+    fig, ax = plt.subplots(figsize=(5.2, 2.3))
     cols = [PINK_HEX if highlight and highlight(k) else BLUE_HEX for k in ks]
     ax.bar(ks, ps, width=0.6, color=cols)
-    ax.set_xlabel(xlabel)
+    ax.set_xlabel("k")
     ax.set_ylabel(ylabel)
     ax.yaxis.set_major_formatter(FuncFormatter(comma))
     ax.grid(axis="y", color="#dfe4ee", lw=0.6)
@@ -220,13 +224,14 @@ def content():
                       "Probabilités conditionnelles, arbre pondéré, formule des probabilités totales") + [
         P("Une maladie touche 2 % de la population d'un pays. Un laboratoire a mis au point un test de dépistage de "
           "cette maladie. Des études ont montré que :"),
-        Paragraph("si une personne est malade, le test est positif dans 95 % des cas ;", S["bul"], bulletText="•"),
-        Paragraph("si une personne n'est pas malade, le test est négatif dans 96 % des cas.", S["bul"],
+        Paragraph(fr("si une personne est malade, le test est positif dans 95 % des cas ;"), S["bul"],
+                  bulletText="•"),
+        Paragraph(fr("si une personne n'est pas malade, le test est négatif dans 96 % des cas."), S["bul"],
                   bulletText="•"),
         Spacer(1, 6),
         P("On choisit une personne au hasard dans la population. On note M l'événement « la personne est malade » et "
-          "T l'événement « le test de la personne est positif ». Pour tout événement A, on note A̅ son événement "
-          "contraire. Les probabilités seront arrondies à 10<super>−3</super> si nécessaire."),
+          f"T l'événement « le test de la personne est positif ». Pour tout événement A, on note {bar('A')} son "
+          "événement contraire. Les probabilités seront arrondies à 10<super>−3</super> si nécessaire."),
         P("Partie A. Dans la population générale", "part"),
         Q(1, "Représenter la situation par un arbre pondéré."),
         Q(2, "Calculer P(M ∩ T). Traduire ce résultat par une phrase."),
@@ -261,8 +266,8 @@ def content():
              "de N."),
         Q(7, "Avec une mise de 3 €, calculer la probabilité que le joueur gagne de l'argent lors d'une partie. Ce "
              "résultat contredit-il celui de la question 5 ?"),
-        Q(8, "Un employé propose de remettre la première boule dans l'urne avant le second tirage. On note R le "
-             "nombre de boules rouges obtenues. Quelle est alors la loi de R ? Avec une mise de 3 €, le jeu "
+        Q(8, "Un employé propose de remettre la première boule dans l'urne avant le second tirage. On note X le "
+             "nombre de boules rouges obtenues. Quelle est alors la loi de X ? Avec une mise de 3 €, le jeu "
              "reste-t-il favorable au forain ?"),
     ])
 
@@ -369,7 +374,7 @@ def content():
                9.5 * cm, "Arbre pondéré de la situation."),
         Q(2, "P(M ∩ T) = P(M) × P<sub>M</sub>(T) = 0,02 × 0,95 = 0,019. Dans la population, 1,9 % des personnes "
              "sont malades et ont un test positif."),
-        Q(3, f"M et M̅ forment une partition de l'univers. D'après la formule des probabilités totales : "
+        Q(3, f"M et {MB} forment une partition de l'univers. D'après la formule des probabilités totales : "
              f"P(T) = P(M ∩ T) + P({MB} ∩ T) = 0,019 + 0,98 × 0,04 = 0,019 + 0,0392 = 0,0582."),
         Q(4, "On cherche P<sub>T</sub>(M) = P(M ∩ T) / P(T) = 0,019 / 0,0582 ≈ 0,326."),
         QC("Seulement un tiers environ des personnes positives sont malades. Le test n'est pas mauvais pour autant : "
@@ -427,8 +432,8 @@ def content():
            "trois, mais le plus souvent seulement 2 € nets, alors qu'il perd 3 € dans près de deux parties sur "
            "trois. En moyenne, il perd."),
         Q(8, "Avec remise, les deux tirages sont identiques et indépendants, et ont deux issues (rouge, de probabilité "
-             "0,2, ou blanche) : R suit la loi binomiale ℬ(2 ; 0,2). P(R = 0) = 0,8<super>2</super> = 0,64, "
-             "P(R = 1) = 2 × 0,2 × 0,8 = 0,32 et P(R = 2) = 0,2<super>2</super> = 0,04."),
+             "0,2, ou blanche) : X suit la loi binomiale ℬ(2 ; 0,2). P(X = 0) = 0,8<super>2</super> = 0,64, "
+             "P(X = 1) = 2 × 0,2 × 0,8 = 0,32 et P(X = 2) = 0,2<super>2</super> = 0,04."),
         QC("Alors E(G) = 5 × 0,32 + 40 × 0,04 = 3,2 € et E(N) = 3,2 − 3 = 0,2 € &gt; 0 : le jeu devient favorable au "
            "joueur, et le forain perdrait en moyenne 20 centimes par partie. La proposition est à refuser."),
     ])
@@ -531,8 +536,8 @@ def content():
         Q(4, "La recette vaut 200 × 160 − 600 × Y = 32 000 − 600Y. Par linéarité de l'espérance, son espérance vaut "
              "32 000 − 600 × E(Y) ≈ 32 000 − 600 × 0,36 = 31 784 €."),
         QC("Sans surréservation, la recette est de 150 × 200 = 30 000 €, sans aucune indemnité. Vendre 160 billets "
-           "rapporte en moyenne environ 1 784 € de plus par vol, au prix d'un passager refusé dans un vol sur six "
-           "environ."),
+           "rapporte en moyenne environ 1 784 € de plus par vol, au prix d'au moins un passager refusé dans un vol "
+           "sur six environ."),
         Q(5, "P(X<sub>n</sub> &gt; 150) = 1 − P(X<sub>n</sub> ≤ 150). Pour n = 157 : 1 − 0,9715 = 0,0285 ≤ 0,05. "
              "Pour n = 158 : 1 − 0,9425 = 0,0575 &gt; 0,05."),
         QC("Cette probabilité augmente avec n : plus on vend de billets, plus le risque est grand. La compagnie peut "
@@ -555,7 +560,7 @@ def content():
 class Doc(BaseDocTemplate):
     def __init__(self, path, **kw):
         super().__init__(path, pagesize=A4, leftMargin=2.2 * cm, rightMargin=2.2 * cm, topMargin=1.8 * cm,
-                         bottomMargin=2 * cm, title=f"{TITLE} : exercices corrigés", subject=LEVEL, **kw)
+                         bottomMargin=2 * cm, title=f"{TITLE} : exercices corrigés", subject=LEVEL, invariant=1, **kw)
         frame = Frame(self.leftMargin, self.bottomMargin, self.width, self.height, id="f")
         self.addPageTemplates([PageTemplate(id="p", frames=[frame], onPage=self.footer)])
         self.corr_page = None
@@ -575,7 +580,7 @@ class Doc(BaseDocTemplate):
 
 def story(corr_page):
     EX, CO = content()
-    out = [P(TITLE, "title"), P("Terminale, spécialité maths. Cinq exercices type bac et leurs corrigés.", "sub"),
+    out = [P(TITLE, "title"), P(f"{LEVEL}. Cinq exercices type bac et leurs corrigés.", "sub"),
            P(f"Environ 20 minutes par exercice. Calculatrice autorisée. Corrigés à partir de la page {corr_page}.",
              "intro")]
     for i, ex in enumerate(EX):

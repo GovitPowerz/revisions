@@ -27,7 +27,7 @@
     },
     {
       "categorie": "Probabilités conditionnelles et indépendance",
-      "question": "Même usine : P(D) = 0,07 et P(B ∩ D) = 0,04. Une pièce prise au hasard est défectueuse. Quelle est la probabilité qu'elle vienne de la machine B ?",
+      "question": "Une usine fabrique 40 % de ses pièces sur la machine B, et 10 % des pièces de B sont défectueuses. Sur l'ensemble de la production, P(D) = 0,07 et P(B ∩ D) = 0,04, où D est l'événement « la pièce est défectueuse ». Une pièce prise au hasard est défectueuse : quelle est la probabilité qu'elle vienne de la machine B ?",
       "reponses": [
         "4/7 ≈ 0,57",
         "1/10 = 0,10",

@@ -35,7 +35,7 @@ Then open `#/<subject>/<topic>` in a browser and play the quiz through to the re
 - `index.html` is the only page. `assets/app.js` is one IIFE with a hash router and three views: `#/` (subjects), `#/<subject>` (topics), `#/<subject>/<topic>` (quiz).
 - `quiz/catalogue.json` lists subjects (`matieres`) and their topics (`themes`); each topic points to one quiz file through `fichier`. Adding a subject or a quiz is a data-only change: no code to touch.
 - JSON keys are in French (`matieres`, `themes`, `titre`, `niveau`, `fichier`, `questions`, `reponses`, `explication`, `indice`, `categorie`). The full format is documented in `README.md`, section "Ajouter un quiz".
-- `exercices/<subject>/<topic>-serie-N.pdf` is a printable series of exercises with corrections, committed next to the `.py` of the same name that builds it (ReportLab for layout, matplotlib for figures and display formulas). The script holds all the text; edit it and rebuild, never the PDF. The site does not link the series; GitHub Pages serves them at their path.
+- `exercices/<subject>/<topic>-serie-N.pdf` is a printable series of exercises with corrections, committed next to the `.py` of the same name that builds it (ReportLab for layout, matplotlib for figures and display formulas). The script holds all the text; edit it and rebuild, never the PDF. The build is reproducible (ReportLab `invariant` mode): rebuilding an unchanged script with the same library versions leaves the PDF byte-identical. The site does not link the series; GitHub Pages serves them at their path.
 
 Invariants that are not obvious from a single file:
 
@@ -59,12 +59,12 @@ Invariants that are not obvious from a single file:
 
 ## Writing an exercise series
 
-- Format: 5 bac-style exercises of about 20 minutes each (calculator allowed), one per page, with a pink subtitle naming the notions and numbered questions (parts A/B when useful); then a "Corrigés" section, one page per correction. The first page states where the corrections start; the script finds that page with a first build pass.
-- Start from an existing series script and replace only `content()`, so every series keeps the same layout. Same sources and scope rules as quizzes.
+- Format: 5 bac-style exercises of about 20 minutes each (calculator allowed), each starting on a new page, with a pink subtitle naming the notions and numbered questions (parts A/B when useful); then a "Corrigés" section, each correction starting on a new page. The first page states where the corrections start; the script finds that page with a first build pass.
+- Start from an existing series script and replace only `TITLE`, `LEVEL` and `content()`, so every series keeps the same layout. Same sources and scope rules as quizzes.
 - Statements use the impersonal bac style ("Calculer", "Montrer que"), not "tu". Corrections show the computation, then name the classic mistake, like quiz explanations.
 - Compute every number with a script before writing it into the text.
 - Check by rendering every page (`pdftoppm -r 70 -png`) and looking at it: no formula, table or code block cut from its lead-in line, no orphaned `?` or `:`.
-- ReportLab traps: `keepWithNext` does not chain into a `KeepTogether`, so formula images and code blocks are returned as bare flowables; French spaces before `? : ; » € %` become non-breaking in `fr()`. Mathtext traps: use `\dfrac` for display-size fractions and `\genfrac{(}{)}{0}{0}{n}{k}` for binomial coefficients (`\dbinom` does not exist).
+- ReportLab traps: `keepWithNext` does not chain into a `KeepTogether`, so formula images, tables and code blocks are returned as bare flowables; French spaces before `? : ; » € %` and spaces inside `P(...)`, `E(...)`, `V(...)` become non-breaking in `fr()`; a combining overline is drawn on the letter, so complements are written with `bar()`. Mathtext traps: use `\dfrac` for display-size fractions and `\genfrac{(}{)}{0}{0}{n}{k}` for binomial coefficients (`\dbinom` does not exist).
 
 ## Git
 
