@@ -12,6 +12,7 @@ assets/app.js              affichage des matières, des thèmes et des quiz
 assets/style.css           mise en forme
 quiz/catalogue.json        liste des matières et des thèmes
 quiz/<matière>/<thème>.json   les questions d'un quiz
+exercices/<matière>/          fiches d'exercices corrigés (PDF) et leurs scripts
 ```
 
 Les adresses du site suivent la même logique :
@@ -61,6 +62,16 @@ Règles à respecter :
 - Les textes des questions, réponses, indices et explications acceptent du HTML simple, par exemple `H<sub>2</sub>O` ou `10<sup>−3</sup>`.
 
 Pour ajouter une matière, ajouter une entrée dans `matieres` avec un `id`, un `titre` et une liste `themes`.
+
+## Fiches d'exercices
+
+Chaque fiche PDF du dossier `exercices/` est produite par le script Python du même nom, qui contient les énoncés et les corrigés. Pour la refaire après une modification :
+
+```
+uv run --with reportlab --with matplotlib python exercices/maths/probabilites-loi-binomiale-serie-1.py
+```
+
+Les fiches ne sont pas listées sur le site, mais on peut les ouvrir à leur adresse, par exemple <https://govitpowerz.github.io/revisions/exercices/maths/probabilites-loi-binomiale-serie-1.pdf>.
 
 ## Tester sur son ordinateur
 
