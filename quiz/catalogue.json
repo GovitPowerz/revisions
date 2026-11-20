@@ -12,6 +12,14 @@
           "questions": 20,
           "fichier": "quiz/maths/probabilites-loi-binomiale.json"
         }
+      ],
+      "exercices": [
+        {
+          "titre": "Probabilités, espérance, variance et loi binomiale : série 1",
+          "niveau": "Terminale spécialité",
+          "description": "Un test de dépistage, le jeu de la fête foraine, la sandwicherie, un contrôle de qualité et la surréservation.",
+          "fichier": "exercices/maths/probabilites-loi-binomiale-serie-1.pdf"
+        }
       ]
     },
     {
@@ -41,6 +49,20 @@
           "description": "Unités d'énergie (J, kWh, tep), relation E = P × Δt, énergie primaire et finale, énergies de stock et de flux, consommation mondiale, combustion et empreinte carbone.",
           "questions": 20,
           "fichier": "quiz/physique-chimie/energie-monde-empreinte-carbone.json"
+        }
+      ],
+      "exercices": [
+        {
+          "titre": "Dosages par étalonnage et spectres IR : série 1",
+          "niveau": "Terminale spécialité",
+          "description": "L'eau de Dakin, le sérum physiologique, un acide chlorhydrique du commerce, six molécules et quatre spectres, l'arôme de banane.",
+          "fichier": "exercices/physique-chimie/dosages-spectres-ir-serie-1.pdf"
+        },
+        {
+          "titre": "Dosages par étalonnage et spectres IR : série 2",
+          "niveau": "Terminale spécialité",
+          "description": "Le bleu patenté d'un sirop de menthe, les pastilles d'un absorbeur d'humidité, le sucre d'une limonade, deux flacons sans étiquette, la caféine d'une boisson énergisante.",
+          "fichier": "exercices/physique-chimie/dosages-spectres-ir-serie-2.pdf"
         }
       ]
     },

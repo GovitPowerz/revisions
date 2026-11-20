@@ -3,11 +3,12 @@
  *
  * Three views, selected by the URL hash:
  *   #/                       list of subjects
- *   #/<subject>              list of topics of a subject
+ *   #/<subject>              list of topics of a subject, then its exercise series
  *   #/<subject>/<topic>      the quiz itself
  *
- * Content lives in JSON files: quiz/catalogue.json lists subjects and topics,
- * and each topic points to one quiz file. Adding a quiz needs no code change.
+ * Content lives in JSON files: quiz/catalogue.json lists subjects, their topics
+ * and their exercise series; each topic points to one quiz file and each series
+ * to one PDF. Adding a quiz or a series needs no code change.
  */
 (function () {
   'use strict';
@@ -161,7 +162,7 @@
   }
 
   /**
-   * Subject page: one tile per topic.
+   * Subject page: one tile per topic, then one tile per exercise series (PDF) when the subject has any.
    * @param {object} matiere Subject entry of the catalogue.
    */
   function viewSubject(matiere) {
@@ -179,12 +180,29 @@
           </span>
         </a></li>`;
     }).join('');
+    const series = (matiere.exercices || []).map(e => `
+        <li><a class="tile" href="${esc(e.fichier)}">
+          <span class="tile-title">${esc(e.titre)}</span>
+          ${e.description ? `<span class="tile-desc">${esc(e.description)}</span>` : ''}
+          <span class="tile-meta">
+            ${e.niveau ? `<span class="tag">${esc(e.niveau)}</span>` : ''}
+            <span>PDF avec corrigés</span>
+          </span>
+        </a></li>`).join('');
     app.innerHTML = `
       <div class="intro">
         <h1 tabindex="-1">${esc(matiere.titre)}</h1>
         <p class="sub">${matiere.themes.length ? 'Choisis un thème.' : 'Pas encore de quiz dans cette matière.'}</p>
       </div>
-      <ul class="list">${tiles}</ul>`;
+      <ul class="list">${tiles}</ul>
+      ${series ? `
+      <section class="section" aria-labelledby="exercices-title">
+        <div class="intro">
+          <h2 class="section-title" id="exercices-title">Exercices</h2>
+          <p class="sub">Des séries d'exercices type bac avec leurs corrigés, à imprimer.</p>
+        </div>
+        <ul class="list">${series}</ul>
+      </section>` : ''}`;
     finishView(matiere.titre);
   }
 
