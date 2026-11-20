@@ -27,6 +27,14 @@
           "fichier": "quiz/physique-chimie/dosages-spectres-ir.json"
         },
         {
+          "id": "dosages-spectres-ir-2",
+          "titre": "Dosages par étalonnage et spectres IR (quiz 2)",
+          "niveau": "Terminale spécialité",
+          "description": "Coefficient d'absorption molaire, validité de la loi de Beer-Lambert, mélanges de colorants, conductance et loi de Kohlrausch, titre massique, lecture et exploitation de spectres IR.",
+          "questions": 20,
+          "fichier": "quiz/physique-chimie/dosages-spectres-ir-2.json"
+        },
+        {
           "id": "energie-monde-empreinte-carbone",
           "titre": "L'énergie dans le monde : ressources, consommation et empreinte carbone",
           "niveau": "Terminale enseignement scientifique",
