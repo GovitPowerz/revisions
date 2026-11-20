@@ -3,7 +3,16 @@
     {
       "id": "maths",
       "titre": "Maths",
-      "themes": []
+      "themes": [
+        {
+          "id": "probabilites-loi-binomiale",
+          "titre": "Probabilités, espérance, variance et loi binomiale",
+          "niveau": "Terminale spécialité",
+          "description": "Probabilités conditionnelles, indépendance, espérance et variance (linéarité, somme de variables indépendantes, échantillon), schéma de Bernoulli et loi binomiale.",
+          "questions": 20,
+          "fichier": "quiz/maths/probabilites-loi-binomiale.json"
+        }
+      ]
     },
     {
       "id": "physique-chimie",

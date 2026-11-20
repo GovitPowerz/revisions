@@ -1,0 +1,233 @@
+{
+  "titre": "Probabilités, espérance, variance et loi binomiale",
+  "niveau": "Terminale, spécialité maths",
+  "questions": [
+    {
+      "categorie": "Probabilités conditionnelles et indépendance",
+      "question": "A et B sont deux événements, avec P(A) ≠ 0. Comment se calcule la probabilité de B sachant A, notée P<sub>A</sub>(B) ?",
+      "reponses": [
+        "P(A ∩ B) / P(A)",
+        "P(A ∩ B) / P(B)",
+        "P(A) × P(B)",
+        "P(A ∩ B) × P(A)"
+      ],
+      "explication": "Par définition, P<sub>A</sub>(B) = P(A ∩ B) / P(A) : on se place dans l'univers réduit à A, donc on divise par P(A). Diviser par P(B) donne l'autre probabilité conditionnelle, P<sub>B</sub>(A). Le produit P(A) × P(B) n'est égal à P(A ∩ B) que si A et B sont indépendants, et ce n'est pas une probabilité conditionnelle. Enfin, c'est P(A) × P<sub>A</sub>(B) qui donne P(A ∩ B) : on multiplie le long de la branche de l'arbre qui va de A vers B."
+    },
+    {
+      "categorie": "Probabilités conditionnelles et indépendance",
+      "question": "Une usine fabrique 60 % de ses pièces sur la machine A et 40 % sur la machine B. 5 % des pièces de A sont défectueuses, contre 10 % de celles de B. On prend une pièce au hasard : quelle est la probabilité qu'elle soit défectueuse (événement D) ?",
+      "reponses": [
+        "0,07",
+        "0,075",
+        "0,15",
+        "0,03"
+      ],
+      "explication": "A et B forment une partition de l'univers, donc d'après la formule des probabilités totales : P(D) = P(A) × P<sub>A</sub>(D) + P(B) × P<sub>B</sub>(D) = 0,6 × 0,05 + 0,4 × 0,10 = 0,03 + 0,04 = 0,07. 0,075 est la moyenne simple de 5 % et 10 % : elle oublie que les deux machines ne produisent pas autant de pièces. 0,15 additionne les deux taux, et 0,03 ne garde que le chemin qui passe par la machine A.",
+      "indice": "Dessine l'arbre : A ou B, puis D ou non D sur chaque branche. Il faut additionner les chemins qui mènent à D."
+    },
+    {
+      "categorie": "Probabilités conditionnelles et indépendance",
+      "question": "Une usine fabrique 40 % de ses pièces sur la machine B, et 10 % des pièces de B sont défectueuses. Sur l'ensemble de la production, P(D) = 0,07 et P(B ∩ D) = 0,04, où D est l'événement « la pièce est défectueuse ». Une pièce prise au hasard est défectueuse : quelle est la probabilité qu'elle vienne de la machine B ?",
+      "reponses": [
+        "4/7 ≈ 0,57",
+        "1/10 = 0,10",
+        "1/25 = 0,04",
+        "2/5 = 0,40"
+      ],
+      "explication": "On cherche P<sub>D</sub>(B), la probabilité de B sachant D : P<sub>D</sub>(B) = P(B ∩ D) / P(D) = 0,04 / 0,07 = 4/7 ≈ 0,57. La machine B fabrique 40 % des pièces, mais 57 % des pièces défectueuses. 0,10 est P<sub>B</sub>(D), la probabilité d'être défectueuse sachant qu'elle vient de B : c'est la condition inversée, l'erreur la plus fréquente. 0,04 est P(B ∩ D), sans la division par P(D). 0,40 est P(B), qui ignore l'information « la pièce est défectueuse ».",
+      "indice": "La condition est « la pièce est défectueuse » : c'est par P(D) qu'il faut diviser."
+    },
+    {
+      "categorie": "Probabilités conditionnelles et indépendance",
+      "question": "A et B sont deux événements incompatibles, avec P(A) = 0,3 et P(B) = 0,5. Sont-ils indépendants ?",
+      "reponses": [
+        "Non : P(A ∩ B) = 0 mais P(A) × P(B) = 0,15",
+        "Oui : incompatibles veut dire indépendants",
+        "Oui, car P(A ∪ B) = P(A) + P(B) = 0,8",
+        "On ne peut pas conclure sans connaître P<sub>A</sub>(B)"
+      ],
+      "explication": "A et B sont indépendants si et seulement si P(A ∩ B) = P(A) × P(B). Incompatibles signifie que A ∩ B est vide, donc P(A ∩ B) = 0, alors que P(A) × P(B) = 0,15 : ils ne sont pas indépendants. C'est logique : si A se réalise, B ne peut plus se réaliser, donc A influence B. L'égalité P(A ∪ B) = P(A) + P(B) traduit l'incompatibilité, pas l'indépendance. Et P<sub>A</sub>(B) est connue : elle vaut 0."
+    },
+    {
+      "categorie": "Probabilités conditionnelles et indépendance",
+      "question": "On lance trois fois de suite un dé équilibré. Quelle est la probabilité d'obtenir un 6 au premier lancer, puis aucun 6 aux deux lancers suivants ?",
+      "reponses": [
+        "25/216",
+        "75/216",
+        "1/216",
+        "1/6"
+      ],
+      "explication": "Les lancers sont indépendants : la probabilité d'une issue est le produit des probabilités de ses composantes. Ici, l'issue (6 ; non 6 ; non 6) a pour probabilité 1/6 × 5/6 × 5/6 = 25/216. 75/216 = 3 × 25/216 est la probabilité d'obtenir exactement un 6 sur les trois lancers, à n'importe quelle place : or la question impose que le 6 sorte au premier lancer. 1/216 est la probabilité de trois 6, et 1/6 oublie les deux autres lancers."
+    },
+    {
+      "categorie": "Espérance et variance",
+      "question": "Une variable aléatoire X prend les valeurs −2, 1 et 5 avec les probabilités respectives 0,5 ; 0,3 et 0,2. Quelle est l'espérance de X ?",
+      "reponses": [
+        "0,3",
+        "2,3",
+        "4/3 ≈ 1,33",
+        "−2"
+      ],
+      "explication": "E(X) = Σ x<sub>i</sub> × p<sub>i</sub> = −2 × 0,5 + 1 × 0,3 + 5 × 0,2 = −1 + 0,3 + 1 = 0,3. 2,3 oublie le signe moins de −2. 4/3 est la moyenne simple des trois valeurs : elle ne tient pas compte de leurs probabilités. −2 est la valeur la plus probable de X, ce n'est pas son espérance."
+    },
+    {
+      "categorie": "Espérance et variance",
+      "question": "X prend les valeurs 1 et 5, chacune avec la probabilité 0,5. Son espérance vaut 3. Quelle est la variance de X ?",
+      "reponses": [
+        "4",
+        "2",
+        "13",
+        "0"
+      ],
+      "explication": "V(X) = Σ p<sub>i</sub> × (x<sub>i</sub> − E(X))<sup>2</sup> = 0,5 × (1 − 3)<sup>2</sup> + 0,5 × (5 − 3)<sup>2</sup> = 2 + 2 = 4. On peut aussi utiliser V(X) = E(X<sup>2</sup>) − E(X)<sup>2</sup> = 13 − 9 = 4. 2 est l'écart type σ(X) = √V(X), pas la variance. 13 est E(X<sup>2</sup>), sans retirer E(X)<sup>2</sup>. 0 est la moyenne des écarts x<sub>i</sub> − E(X) sans les mettre au carré : ces écarts se compensent toujours, c'est pour cela qu'on les élève au carré.",
+      "indice": "La variance est la moyenne des carrés des écarts à l'espérance."
+    },
+    {
+      "categorie": "Espérance et variance",
+      "question": "X est une variable aléatoire avec E(X) = 5 et V(X) = 2. On pose Y = 3X − 4. Que valent E(Y) et V(Y) ?",
+      "reponses": [
+        "E(Y) = 11 et V(Y) = 18",
+        "E(Y) = 11 et V(Y) = 6",
+        "E(Y) = 11 et V(Y) = 14",
+        "E(Y) = 15 et V(Y) = 18"
+      ],
+      "explication": "L'espérance est linéaire : E(3X − 4) = 3E(X) − 4 = 11. Pour la variance, V(aX + b) = a<sup>2</sup>V(X) : le facteur passe au carré, et la constante disparaît, car décaler toutes les valeurs ne change pas leur dispersion. Donc V(Y) = 9 × 2 = 18. V(Y) = 6 oublie le carré sur 3, V(Y) = 14 retire 4 à tort, et E(Y) = 15 oublie le −4."
+    },
+    {
+      "categorie": "Espérance et variance",
+      "question": "X et Y sont deux variables aléatoires quelconques, pas forcément indépendantes. Laquelle de ces égalités est toujours vraie ?",
+      "reponses": [
+        "E(X + Y) = E(X) + E(Y)",
+        "V(X + Y) = V(X) + V(Y)",
+        "V(X − Y) = V(X) − V(Y)",
+        "V(2X) = 2V(X)"
+      ],
+      "explication": "La linéarité de l'espérance est toujours vraie, même si X et Y sont liées : c'est ce qui en fait un outil si puissant. L'additivité V(X + Y) = V(X) + V(Y) exige que X et Y soient indépendantes. Même dans ce cas, V(X − Y) = V(X) + V(Y) et non V(X) − V(Y), car V(−Y) = (−1)<sup>2</sup>V(Y) = V(Y) : les variances s'ajoutent, même pour une différence. Enfin, V(2X) = 2<sup>2</sup>V(X) = 4V(X)."
+    },
+    {
+      "categorie": "Espérance et variance",
+      "question": "Un dé équilibré a une espérance de 3,5 et une variance de 35/12. On lance deux dés de façon indépendante et on note S la somme des deux faces. Quelle est la variance de S ?",
+      "reponses": [
+        "35/6 ≈ 5,83",
+        "35/3 ≈ 11,67",
+        "35/12 ≈ 2,92",
+        "√(35/6) ≈ 2,42"
+      ],
+      "explication": "S = X<sub>1</sub> + X<sub>2</sub>, où X<sub>1</sub> et X<sub>2</sub> sont les résultats des deux dés, indépendants. Les variances s'ajoutent : V(S) = 35/12 + 35/12 = 35/6. Le piège est d'écrire S = 2X<sub>1</sub>, ce qui donnerait V(S) = 4 × 35/12 = 35/3 : lancer deux dés, ce n'est pas doubler le résultat d'un seul, car un dé fort et un dé faible se compensent souvent. 35/12 est la variance d'un seul dé, et √(35/6) est l'écart type de S, pas sa variance.",
+      "indice": "X<sub>1</sub> + X<sub>2</sub> et 2X<sub>1</sub> ont la même espérance, mais pas la même variance."
+    },
+    {
+      "categorie": "Espérance et variance",
+      "question": "Une variable aléatoire X a un écart type σ = 12. On considère un échantillon de taille n = 36 de la loi de X, et sa moyenne M<sub>36</sub>. Quel est l'écart type de M<sub>36</sub> ?",
+      "reponses": [
+        "2",
+        "4",
+        "1/3",
+        "12"
+      ],
+      "explication": "Pour un échantillon de taille n, V(M<sub>n</sub>) = V(X)/n, donc σ(M<sub>n</sub>) = σ(X)/√n = 12/√36 = 12/6 = 2. 4 = 144/36 est la variance V(M<sub>36</sub>), pas l'écart type. 1/3 = 12/36 divise l'écart type par n au lieu de √n. 12 oublie que faire la moyenne réduit la dispersion : M<sub>n</sub> a la même espérance que X, mais ses valeurs sont plus resserrées autour de cette espérance."
+    },
+    {
+      "categorie": "Espérance et variance",
+      "question": "Un ticket de jeu coûte 2 €. Le montant G gagné à chaque partie a pour espérance 1,5 €. Que vaut l'espérance du gain net N = G − 2, et que signifie-t-elle ?",
+      "reponses": [
+        "−0,5 € : on perd en moyenne 0,50 € par partie",
+        "−0,5 € : on perd 0,50 € à chaque partie",
+        "3,5 € : le jeu est donc favorable au joueur",
+        "−0,5 € : on perd environ une partie sur deux"
+      ],
+      "explication": "Par linéarité, E(N) = E(G) − 2 = −0,5 €. L'espérance est une moyenne : sur un grand nombre de parties, le gain net moyen par partie se rapproche de −0,50 €, donc le jeu est défavorable au joueur. On ne perd pas forcément 0,50 € à chaque partie (on peut gagner beaucoup ou tout perdre), et l'espérance ne dit rien de la proportion de parties perdues. 3,5 € ajoute le prix du ticket au lieu de le retirer."
+    },
+    {
+      "categorie": "Loi binomiale",
+      "question": "Dans laquelle de ces situations la variable aléatoire X suit-elle une loi binomiale ?",
+      "reponses": [
+        "X est le nombre de boules rouges obtenues en 5 tirages avec remise dans une urne",
+        "X est le nombre de boules rouges obtenues en 5 tirages sans remise dans une urne de 8 boules",
+        "X est le nombre de lancers d'un dé nécessaires pour obtenir le premier 6",
+        "X est la somme des faces obtenues en lançant 5 dés équilibrés"
+      ],
+      "explication": "Une loi binomiale ℬ(n ; p) compte le nombre de succès dans un schéma de Bernoulli : n épreuves identiques et indépendantes, à deux issues chacune. Avec remise, l'urne est la même à chaque tirage : c'est bien le cas. Sans remise dans une petite urne, la composition change à chaque tirage : les épreuves ne sont ni identiques ni indépendantes. Pour le premier 6, le nombre d'épreuves n'est pas fixé à l'avance (c'est une loi géométrique). La somme des faces ne compte pas des succès : chaque lancer a six issues, pas deux."
+    },
+    {
+      "categorie": "Loi binomiale",
+      "question": "X suit la loi binomiale ℬ(n ; p). Pour un entier k compris entre 0 et n, que vaut P(X = k) ?",
+      "reponses": [
+        "(k parmi n) × p<sup>k</sup> × (1 − p)<sup>n − k</sup>",
+        "p<sup>k</sup> × (1 − p)<sup>n − k</sup>",
+        "(k parmi n) × p<sup>n − k</sup> × (1 − p)<sup>k</sup>",
+        "n × p<sup>k</sup> × (1 − p)<sup>n − k</sup>"
+      ],
+      "explication": "Dans l'arbre du schéma de Bernoulli, chaque chemin qui comporte k succès et n − k échecs a pour probabilité p<sup>k</sup> × (1 − p)<sup>n − k</sup>, par indépendance. Il y a « k parmi n » chemins de ce type (le coefficient binomial, noté avec n au-dessus de k entre parenthèses), d'où la formule. Sans le coefficient, on ne compte qu'un seul chemin. Avec les exposants inversés, on calcule la probabilité de k échecs. Le facteur n à la place de « k parmi n » n'est juste que pour k = 1 ou k = n − 1."
+    },
+    {
+      "categorie": "Loi binomiale",
+      "question": "Un QCM comporte 5 questions indépendantes, chacune avec 4 réponses dont une seule juste. Un élève répond entièrement au hasard. Quelle est la probabilité qu'il ait exactement 2 bonnes réponses ?",
+      "reponses": [
+        "≈ 0,264",
+        "≈ 0,026",
+        "0,0625",
+        "0,4"
+      ],
+      "explication": "Le nombre X de bonnes réponses suit la loi ℬ(5 ; 0,25). P(X = 2) = (2 parmi 5) × 0,25<sup>2</sup> × 0,75<sup>3</sup> = 10 × 0,0625 × 0,421875 ≈ 0,264. Sans le coefficient « 2 parmi 5 » = 10, on obtient ≈ 0,026 : c'est la probabilité d'un seul ordre, par exemple juste, juste, faux, faux, faux. 0,0625 = 0,25<sup>2</sup> oublie les trois mauvaises réponses. 0,4 = 2/5 est une proportion de questions, pas une probabilité.",
+      "indice": "Combien y a-t-il de façons de placer les 2 bonnes réponses parmi les 5 questions ?"
+    },
+    {
+      "categorie": "Loi binomiale",
+      "question": "Dans l'arbre d'un schéma de Bernoulli à n épreuves, que représente le coefficient binomial « k parmi n » ?",
+      "reponses": [
+        "Le nombre de chemins qui comportent exactement k succès",
+        "La probabilité d'obtenir exactement k succès",
+        "Le nombre de chemins qui comportent au moins k succès",
+        "Le nombre total de chemins de l'arbre"
+      ],
+      "explication": "« k parmi n » est le nombre de façons de choisir, parmi les n épreuves, les k qui donnent un succès : c'est le nombre de chemins de l'arbre avec exactement k succès. Ce n'est pas une probabilité, c'est un entier, qu'on multiplie ensuite par p<sup>k</sup> × (1 − p)<sup>n − k</sup>. L'arbre compte 2<sup>n</sup> chemins au total, et la somme des « k parmi n » pour k allant de 0 à n vaut justement 2<sup>n</sup>."
+    },
+    {
+      "categorie": "Loi binomiale",
+      "question": "X suit la loi binomiale ℬ(100 ; 0,2). Que valent son espérance et son écart type ?",
+      "reponses": [
+        "E(X) = 20 et σ(X) = 4",
+        "E(X) = 20 et σ(X) = 16",
+        "E(X) = 20 et σ(X) ≈ 4,47",
+        "E(X) = 80 et σ(X) = 4"
+      ],
+      "explication": "Si X suit ℬ(n ; p), alors E(X) = np = 100 × 0,2 = 20 et V(X) = np(1 − p) = 100 × 0,2 × 0,8 = 16, donc σ(X) = √16 = 4. 16 est la variance, pas l'écart type. 4,47 ≈ √20 oublie le facteur (1 − p) dans la variance. 80 = n(1 − p) est le nombre moyen d'échecs, pas de succès."
+    },
+    {
+      "categorie": "Loi binomiale",
+      "question": "Pour démontrer que la variance d'une loi binomiale ℬ(n ; p) vaut np(1 − p), quel raisonnement est correct ?",
+      "reponses": [
+        "X est la somme de n variables de Bernoulli indépendantes, de variance p(1 − p) chacune",
+        "X est la somme de n variables de Bernoulli, et les variances s'ajoutent toujours",
+        "X = nY, où Y suit une loi de Bernoulli de paramètre p et de variance p(1 − p)",
+        "On multiplie l'espérance np par la probabilité p d'obtenir un succès à chaque épreuve"
+      ],
+      "explication": "On écrit X = X<sub>1</sub> + … + X<sub>n</sub>, où X<sub>i</sub> vaut 1 si la i-ème épreuve est un succès et 0 sinon. Chaque X<sub>i</sub> suit une loi de Bernoulli : E(X<sub>i</sub>) = p et V(X<sub>i</sub>) = p(1 − p). Par linéarité, E(X) = np ; comme les épreuves sont indépendantes, les variances s'ajoutent : V(X) = np(1 − p). Sans indépendance, l'additivité des variances est fausse. X = nY donnerait V(X) = n<sup>2</sup>p(1 − p) : le nombre de succès n'est pas n fois le résultat d'une seule épreuve. Multiplier np par p donnerait np<sup>2</sup> : c'est par (1 − p), la probabilité d'échec, qu'il faut multiplier."
+    },
+    {
+      "categorie": "Loi binomiale",
+      "question": "À chaque tentative, indépendamment des autres, un joueur a une probabilité 0,1 de réussir. Combien de tentatives lui faut-il au minimum pour que la probabilité de réussir au moins une fois soit supérieure ou égale à 0,9 ?",
+      "reponses": [
+        "22",
+        "21",
+        "10",
+        "9"
+      ],
+      "explication": "Avec n tentatives, le nombre de réussites X suit ℬ(n ; 0,1) et P(X ≥ 1) = 1 − P(X = 0) = 1 − 0,9<sup>n</sup>. On veut 1 − 0,9<sup>n</sup> ≥ 0,9, soit 0,9<sup>n</sup> ≤ 0,1, donc n × ln(0,9) ≤ ln(0,1). Comme ln(0,9) est négatif, l'inégalité change de sens quand on divise : n ≥ ln(0,1) / ln(0,9) ≈ 21,85, d'où n = 22. 21 arrondit dans le mauvais sens : 1 − 0,9<sup>21</sup> ≈ 0,891, c'est trop peu. 10 = 1/0,1 ne donne que 1 − 0,9<sup>10</sup> ≈ 0,651, et 9 vient du rapport 0,9/0,1.",
+      "indice": "Passe par l'événement contraire : « aucune réussite »."
+    },
+    {
+      "categorie": "Loi binomiale",
+      "question": "Une compagnie vend 52 billets pour un avion de 50 places. Chaque passager se présente avec une probabilité 0,9, indépendamment des autres. X est le nombre de passagers qui se présentent. Quelle est la probabilité qu'au moins un passager présent n'ait pas de place ?",
+      "reponses": [
+        "P(X ≥ 51) ≈ 0,028",
+        "P(X ≥ 50) ≈ 0,097",
+        "P(X ≥ 52) ≈ 0,004",
+        "P(X ≤ 50) ≈ 0,972"
+      ],
+      "explication": "X suit la loi ℬ(52 ; 0,9). Il manque des places dès que plus de 50 passagers se présentent, c'est-à-dire si X ≥ 51 : P(X ≥ 51) = 1 − P(X ≤ 50) ≈ 1 − 0,972 = 0,028. P(X ≥ 50) inclut le cas X = 50, où tout le monde a une place : attention aux bornes, « plus de 50 » se traduit par X ≥ 51. P(X ≥ 52) oublie le cas de 51 passagers. P(X ≤ 50) est l'événement contraire : tout le monde a une place.",
+      "indice": "À partir de combien de passagers présents l'avion est-il trop petit ?"
+    }
+  ]
+}
