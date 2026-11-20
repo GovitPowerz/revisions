@@ -1,0 +1,233 @@
+{
+  "titre": "Dosages par étalonnage et spectres IR (quiz 2)",
+  "niveau": "Terminale, spécialité physique-chimie",
+  "questions": [
+    {
+      "categorie": "Dosages par étalonnage",
+      "question": "Dans la loi de Beer-Lambert A = ε·ℓ·c, ℓ s'exprime en cm et c en mol·L<sup>−1</sup>. Quelle est alors l'unité de ε ?",
+      "reponses": [
+        "L·mol<sup>−1</sup>·cm<sup>−1</sup>",
+        "mol·L<sup>−1</sup>·cm<sup>−1</sup>",
+        "mol·L<sup>−1</sup>·cm",
+        "Sans unité, comme A"
+      ],
+      "explication": "L'absorbance A n'a pas d'unité, donc ε = A / (ℓ·c) s'exprime en 1 / (cm × mol·L<sup>−1</sup>), soit L·mol<sup>−1</sup>·cm<sup>−1</sup>. C'est A qui est sans unité, pas ε ; et diviser par une concentration inverse son unité.",
+      "indice": "Isole ε, puis souviens-toi que A n'a pas d'unité."
+    },
+    {
+      "categorie": "Dosages par étalonnage",
+      "question": "Une solution de concentration 2,0 × 10<sup>−4</sup> mol·L<sup>−1</sup>, placée dans une cuve de 1,0 cm, a une absorbance A = 0,30 à 510 nm. Que vaut ε à cette longueur d'onde ?",
+      "reponses": [
+        "1,5 × 10<sup>3</sup> L·mol<sup>−1</sup>·cm<sup>−1</sup>",
+        "6,0 × 10<sup>−5</sup> L·mol<sup>−1</sup>·cm<sup>−1</sup>",
+        "6,7 × 10<sup>−4</sup> L·mol<sup>−1</sup>·cm<sup>−1</sup>",
+        "1,5 × 10<sup>−3</sup> L·mol<sup>−1</sup>·cm<sup>−1</sup>"
+      ],
+      "explication": "ε = A / (ℓ·c) = 0,30 / (1,0 × 2,0 × 10<sup>−4</sup>) = 1,5 × 10<sup>3</sup> L·mol<sup>−1</sup>·cm<sup>−1</sup>. Les autres valeurs viennent d'une multiplication au lieu d'une division, d'un rapport inversé, ou d'une erreur de signe sur la puissance de 10 : diviser par 10<sup>−4</sup> revient à multiplier par 10<sup>4</sup>."
+    },
+    {
+      "categorie": "Dosages par étalonnage",
+      "question": "Dans A = ε·ℓ·c, de quoi le coefficient d'absorption molaire ε ne dépend-il pas ?",
+      "reponses": [
+        "De la concentration de la solution",
+        "De la longueur d'onde de la lumière",
+        "De l'espèce chimique qui absorbe",
+        "Du solvant et de la température"
+      ],
+      "explication": "ε caractérise l'espèce absorbante à une longueur d'onde donnée, dans un solvant et à une température donnés. Il ne dépend pas de c : c'est justement pour cela que A est proportionnelle à c. En revanche ε varie avec λ, et c'est ce que montre le spectre d'absorption."
+    },
+    {
+      "categorie": "Dosages par étalonnage",
+      "question": "Avant de mesurer les absorbances, on « fait le blanc » avec une cuve remplie de solvant. À quoi cela sert-il ?",
+      "reponses": [
+        "À ne mesurer que l'absorbance due à l'espèce dosée",
+        "À régler la longueur d'onde du maximum d'absorption",
+        "À rincer la cuve avant d'y verser l'échantillon",
+        "À mesurer la concentration de l'espèce dans le solvant"
+      ],
+      "explication": "Le solvant et les parois de la cuve absorbent ou réfléchissent un peu de lumière. Faire le blanc règle A = 0 pour la cuve remplie de solvant seul : l'absorbance mesurée ensuite est due uniquement à l'espèce dissoute. Le choix de la longueur d'onde se fait à part, à partir du spectre d'absorption."
+    },
+    {
+      "categorie": "Dosages par étalonnage",
+      "question": "Sur une courbe d'étalonnage A = f(c), les deux solutions étalons les plus concentrées donnent des points nettement en dessous de la droite tracée avec les autres. Comment l'interpréter ?",
+      "reponses": [
+        "Elles sont trop concentrées pour la loi de Beer-Lambert",
+        "Le blanc a été oublié avant de faire les mesures",
+        "Elles ont été mesurées dans une cuve plus longue",
+        "L'absorbance diminue quand la concentration augmente"
+      ],
+      "explication": "La loi de Beer-Lambert n'est valable que pour des solutions diluées éclairées par une lumière monochromatique. Aux fortes concentrations, A augmente moins vite que c et les points quittent la droite : on n'exploite que la partie linéaire et on dilue les échantillons trop concentrés. Un blanc oublié décalerait tous les points, pas seulement les derniers ; une cuve plus longue donnerait des points au-dessus de la droite.",
+      "indice": "La loi de Beer-Lambert a un domaine de validité."
+    },
+    {
+      "categorie": "Dosages par étalonnage",
+      "question": "Un colorant jaune absorbe surtout vers 430 nm et un colorant bleu surtout vers 630 nm. Le spectre d'absorption d'une boisson verte présente deux maxima, vers 430 nm et vers 630 nm. Que peut-on en conclure ?",
+      "reponses": [
+        "Elle contient sans doute les deux colorants, jaune et bleu",
+        "Elle contient un colorant vert, qui absorbe surtout le vert",
+        "Elle ne contient que le colorant bleu, dont la bande domine",
+        "On ne peut rien conclure d'un spectre à deux maxima"
+      ],
+      "explication": "Les absorbances des espèces d'un mélange s'ajoutent : chaque colorant apporte sa bande, à la même position que dans son propre spectre. La boisson absorbe le violet-bleu (430 nm) et l'orange-rouge (630 nm), et laisse passer surtout le vert. Une espèce n'absorbe pas la couleur qu'on lui voit : elle absorbe la couleur complémentaire.",
+      "indice": "Compare la position des maxima avec celle de chaque colorant."
+    },
+    {
+      "categorie": "Dosages par étalonnage",
+      "question": "Laquelle de ces solutions ne peut pas être dosée par étalonnage conductimétrique ?",
+      "reponses": [
+        "Une solution aqueuse de glucose",
+        "Une solution de chlorure de sodium",
+        "Une solution de sulfate de cuivre",
+        "Une solution d'acide chlorhydrique"
+      ],
+      "explication": "La conductivité d'une solution est due aux ions qu'elle contient. Le glucose est une espèce moléculaire qui ne libère pas d'ions dans l'eau : sa concentration ne modifie pas la conductivité. Les trois autres solutions sont ioniques (Na<sup>+</sup> et Cl<sup>−</sup>, Cu<sup>2+</sup> et SO<sub>4</sub><sup>2−</sup>, H<sub>3</sub>O<sup>+</sup> et Cl<sup>−</sup>)."
+    },
+    {
+      "categorie": "Dosages par étalonnage",
+      "question": "Quelle est l'unité de la conductance G mesurée entre les deux plaques d'une cellule de conductimétrie ?",
+      "reponses": [
+        "Le siemens (S)",
+        "Le siemens par mètre (S·m<sup>−1</sup>)",
+        "L'ohm (Ω)",
+        "Le S·m<sup>2</sup>·mol<sup>−1</sup>"
+      ],
+      "explication": "La conductance G = 1/R s'exprime en siemens (S). La conductivité σ, en S·m<sup>−1</sup>, caractérise la solution indépendamment de la cellule ; S·m<sup>2</sup>·mol<sup>−1</sup> est l'unité des conductivités ioniques molaires λ, et l'ohm celle de la résistance R. Pour une même cellule, G est proportionnelle à σ, donc à c : on peut tracer la droite d'étalonnage directement avec G."
+    },
+    {
+      "categorie": "Dosages par étalonnage",
+      "question": "Une solution de chlorure de calcium CaCl<sub>2</sub> a une concentration en soluté apporté c. D'après la loi de Kohlrausch, comment s'écrit sa conductivité σ ?",
+      "reponses": [
+        "σ = (λ<sub>Ca<sup>2+</sup></sub> + 2 λ<sub>Cl<sup>−</sup></sub>) × c",
+        "σ = (λ<sub>Ca<sup>2+</sup></sub> + λ<sub>Cl<sup>−</sup></sub>) × c",
+        "σ = (2 λ<sub>Ca<sup>2+</sup></sub> + λ<sub>Cl<sup>−</sup></sub>) × c",
+        "σ = 2 (λ<sub>Ca<sup>2+</sup></sub> + λ<sub>Cl<sup>−</sup></sub>) × c"
+      ],
+      "explication": "La dissolution CaCl<sub>2</sub> → Ca<sup>2+</sup> + 2 Cl<sup>−</sup> donne [Ca<sup>2+</sup>] = c et [Cl<sup>−</sup>] = 2c. La loi de Kohlrausch donne σ = λ<sub>Ca<sup>2+</sup></sub>·[Ca<sup>2+</sup>] + λ<sub>Cl<sup>−</sup></sub>·[Cl<sup>−</sup>] = (λ<sub>Ca<sup>2+</sup></sub> + 2 λ<sub>Cl<sup>−</sup></sub>) × c. Le facteur 2 porte sur l'ion présent deux fois, ni sur le calcium, ni sur les deux ions.",
+      "indice": "Écris d'abord l'équation de dissolution de CaCl<sub>2</sub>."
+    },
+    {
+      "categorie": "Dosages par étalonnage",
+      "question": "Une solution de chlorure de sodium a une concentration c = 1,00 × 10<sup>−3</sup> mol·L<sup>−1</sup>. On donne λ<sub>Na<sup>+</sup></sub> = 5,0 mS·m<sup>2</sup>·mol<sup>−1</sup> et λ<sub>Cl<sup>−</sup></sub> = 7,6 mS·m<sup>2</sup>·mol<sup>−1</sup>. Que vaut sa conductivité σ ?",
+      "reponses": [
+        "12,6 mS·m<sup>−1</sup>",
+        "2,6 mS·m<sup>−1</sup>",
+        "1,26 × 10<sup>−2</sup> mS·m<sup>−1</sup>",
+        "1,26 × 10<sup>−5</sup> mS·m<sup>−1</sup>"
+      ],
+      "explication": "On convertit d'abord : 1,00 × 10<sup>−3</sup> mol·L<sup>−1</sup> = 1,00 mol·m<sup>−3</sup>. Puis σ = (λ<sub>Na<sup>+</sup></sub> + λ<sub>Cl<sup>−</sup></sub>) × c = (5,0 + 7,6) × 1,00 = 12,6 mS·m<sup>−1</sup>. Oublier la conversion donne 1,26 × 10<sup>−2</sup> ; la faire dans le mauvais sens donne 1,26 × 10<sup>−5</sup> ; soustraire les λ au lieu de les additionner donne 2,6."
+    },
+    {
+      "categorie": "Dosages par étalonnage",
+      "question": "En conductimétrie, pourquoi l'échantillon et toutes les solutions étalons doivent-ils être mesurés à la même température ?",
+      "reponses": [
+        "Les conductivités ioniques molaires λ varient avec la température",
+        "La température modifie la couleur des solutions mesurées",
+        "Le conductimètre ne peut mesurer qu'à 25 °C exactement",
+        "Les ions changent de charge quand la température varie"
+      ],
+      "explication": "Les conductivités ioniques molaires λ augmentent avec la température, d'environ 2 % par degré : à concentration égale, une solution plus chaude conduit mieux. Si la température change entre l'étalonnage et la mesure, la droite d'étalonnage ne s'applique plus à l'échantillon. La couleur n'intervient qu'en spectrophotométrie."
+    },
+    {
+      "categorie": "Dosages par étalonnage",
+      "question": "Une solution a un titre massique en soluté de 10 % et une densité d = 1,05. Quelle masse de soluté contiennent 100 mL de cette solution ?",
+      "reponses": [
+        "10,5 g",
+        "10,0 g",
+        "9,5 g",
+        "105 g"
+      ],
+      "explication": "La densité d = 1,05 signifie que la masse volumique vaut 1,05 g·mL<sup>−1</sup> : 100 mL de solution pèsent 105 g. Le titre massique est la part de la masse de solution due au soluté : 0,10 × 105 = 10,5 g. Prendre 10 % de 100 g, c'est confondre volume et masse de solution ; diviser ces 10 g par la densité au lieu de multiplier donne 9,5 g ; 105 g est la masse de toute la solution.",
+      "indice": "Calcule d'abord la masse de 100 mL de solution."
+    },
+    {
+      "categorie": "Spectroscopie IR",
+      "question": "Sur un spectre IR, quelle grandeur figure en ordonnée, et dans quel sens pointent les bandes d'absorption ?",
+      "reponses": [
+        "La transmittance, et les bandes pointent vers le bas",
+        "L'absorbance, et les bandes pointent vers le haut",
+        "La transmittance, et les bandes pointent vers le haut",
+        "Le nombre d'onde, et les bandes pointent vers le bas"
+      ],
+      "explication": "Un spectre IR donne la transmittance T (en %), la part du rayonnement qui traverse l'échantillon. Une absorption fait baisser T, d'où des bandes orientées vers le bas. Ce sont les spectres UV-visible qui donnent l'absorbance A, avec des pics vers le haut. Le nombre d'onde est en abscisse, décroissant de gauche à droite."
+    },
+    {
+      "categorie": "Spectroscopie IR",
+      "question": "Sur un spectre IR, on compare une bande à 3300 cm<sup>−1</sup> et une bande à 1700 cm<sup>−1</sup>. Laquelle correspond aux photons les plus énergétiques ?",
+      "reponses": [
+        "Celle à 3300 cm<sup>−1</sup>, car E est proportionnelle au nombre d'onde",
+        "Celle à 1700 cm<sup>−1</sup>, car E est proportionnelle à la longueur d'onde",
+        "Celle des deux qui est la plus intense, quelle que soit sa position",
+        "Aucune des deux : tous les photons IR ont la même énergie"
+      ],
+      "explication": "E = h·c/λ et σ = 1/λ, donc E = h·c·σ : l'énergie d'un photon est proportionnelle au nombre d'onde, et inversement proportionnelle à la longueur d'onde. L'intensité d'une bande indique combien de photons sont absorbés, pas leur énergie.",
+      "indice": "Relie E à λ, puis λ à σ."
+    },
+    {
+      "categorie": "Spectroscopie IR",
+      "question": "Pourquoi la bande vers 2850 – 3000 cm<sup>−1</sup> aide-t-elle rarement à identifier un groupe caractéristique ?",
+      "reponses": [
+        "Elle est due aux liaisons C–H, présentes dans presque toutes les molécules organiques",
+        "Elle est due à la vapeur d'eau de l'air, qui absorbe dans cette zone du spectre",
+        "Elle est due à la liaison C=O, commune à un trop grand nombre de familles",
+        "Elle est due au matériau de la cuve de mesure, et non à l'échantillon"
+      ],
+      "explication": "Les liaisons C–H des chaînes carbonées absorbent vers 2850 – 3000 cm<sup>−1</sup>. Presque toutes les molécules organiques en possèdent, donc cette bande ne distingue pas les familles. Les bandes utiles sont celles des liaisons O–H, N–H et C=O, qui signent les groupes caractéristiques ; la bande C=O se situe vers 1650 – 1750 cm<sup>−1</sup>."
+    },
+    {
+      "categorie": "Spectroscopie IR",
+      "question": "Pourquoi exploite-t-on peu la zone située en dessous de 1500 cm<sup>−1</sup> pour identifier les groupes caractéristiques ?",
+      "reponses": [
+        "Elle contient de nombreuses bandes difficiles à attribuer",
+        "Aucune liaison n'absorbe en dessous de 1500 cm<sup>−1</sup>",
+        "Seules les liaisons O–H et N–H absorbent dans cette zone",
+        "Le spectromètre ne mesure pas en dessous de 1500 cm<sup>−1</sup>"
+      ],
+      "explication": "En dessous de 1500 cm<sup>−1</sup> se trouvent de très nombreuses bandes (liaisons simples C–C, C–O, C–N, etc.), propres à chaque molécule : c'est l'« empreinte digitale ». Elle sert à confirmer l'identité d'une espèce par comparaison avec un spectre de référence, mais pas à repérer un groupe. Les bandes O–H et N–H se trouvent au contraire au-delà de 2500 cm<sup>−1</sup>."
+    },
+    {
+      "categorie": "Spectroscopie IR",
+      "question": "Qu'est-ce qui distingue un aldéhyde d'une cétone ?",
+      "reponses": [
+        "Dans l'aldéhyde, le carbone du C=O porte un hydrogène",
+        "Seule la cétone possède une double liaison C=O",
+        "Dans l'aldéhyde, le C=O est au milieu de la chaîne",
+        "Seul l'aldéhyde possède aussi une liaison O–H"
+      ],
+      "explication": "Les deux familles possèdent le groupe carbonyle C=O. Dans un aldéhyde, le carbone du C=O est lié à au moins un atome d'hydrogène : le groupe –CHO est en bout de chaîne, comme dans le propanal CH<sub>3</sub>–CH<sub>2</sub>–CHO. Dans une cétone, ce carbone est lié à deux atomes de carbone : le C=O est à l'intérieur de la chaîne, comme dans la propanone CH<sub>3</sub>–CO–CH<sub>3</sub>. Aucune des deux n'a de liaison O–H."
+    },
+    {
+      "categorie": "Spectroscopie IR",
+      "question": "Le spectre IR d'une espèce présente une bande vers 3300 – 3500 cm<sup>−1</sup>, mais aucune bande entre 1650 et 1750 cm<sup>−1</sup>. Parmi ces familles, laquelle est compatible avec ce spectre ?",
+      "reponses": [
+        "Amine",
+        "Amide",
+        "Acide carboxylique",
+        "Cétone"
+      ],
+      "explication": "L'absence de bande entre 1650 et 1750 cm<sup>−1</sup> exclut toute liaison C=O, donc les amides, les acides carboxyliques et les cétones. La bande vers 3300 – 3500 cm<sup>−1</sup> peut être celle d'une liaison N–H : une amine convient. Un alcool, avec sa liaison O–H, serait aussi compatible.",
+      "indice": "Quelles familles possèdent une liaison C=O ?"
+    },
+    {
+      "categorie": "Spectroscopie IR",
+      "question": "L'acide éthanoïque CH<sub>3</sub>–COOH et le méthanoate de méthyle HCOO–CH<sub>3</sub> ont la même formule brute C<sub>2</sub>H<sub>4</sub>O<sub>2</sub>. Le spectre IR d'un échantillon présente une bande fine et intense vers 1730 cm<sup>−1</sup>, et aucune bande large au-delà de 2500 cm<sup>−1</sup>. De quelle espèce s'agit-il ?",
+      "reponses": [
+        "Du méthanoate de méthyle, car il n'y a pas de bande O–H",
+        "De l'acide éthanoïque, car il y a une bande C=O",
+        "On ne peut pas conclure : les deux ont une liaison C=O",
+        "D'un mélange des deux, car il n'y a qu'une seule bande"
+      ],
+      "explication": "Les deux isomères possèdent une liaison C=O (bande vers 1700 – 1750 cm<sup>−1</sup>) : cette bande ne les distingue pas. Seul l'acide possède une liaison O–H, qui donne une bande très large entre 2500 et 3200 cm<sup>−1</sup>. Son absence désigne l'ester. C'est souvent l'absence d'une bande qui permet de trancher."
+    },
+    {
+      "categorie": "Spectroscopie IR",
+      "question": "On oxyde le propan-1-ol en propanal. Après purification, le spectre IR du produit présente encore une bande large vers 3200 – 3400 cm<sup>−1</sup>. Que peut-on en conclure ?",
+      "reponses": [
+        "Il contient encore une espèce à liaison O–H",
+        "Le propanal possède lui aussi une liaison O–H",
+        "Cette bande vient des liaisons C–H du propanal",
+        "Il est pur : cette bande est toujours présente"
+      ],
+      "explication": "Le propanal CH<sub>3</sub>–CH<sub>2</sub>–CHO ne possède pas de liaison O–H. Une bande large vers 3200 – 3400 cm<sup>−1</sup> signale une liaison O–H engagée dans des liaisons hydrogène : le produit n'est pas pur, il contient sans doute du propan-1-ol qui n'a pas réagi, ou de l'eau. Les bandes C–H, fines, se situent vers 2850 – 3000 cm<sup>−1</sup>."
+    }
+  ]
+}

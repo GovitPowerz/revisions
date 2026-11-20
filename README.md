@@ -10,7 +10,7 @@ Le site est statique : il n'y a rien à compiler. GitHub Pages sert directement 
 index.html                 page unique du site
 assets/app.js              affichage des matières, des thèmes et des quiz
 assets/style.css           mise en forme
-quiz/catalogue.json        liste des matières et des thèmes
+quiz/catalogue.json        liste des matières, des thèmes et des fiches d'exercices
 quiz/<matière>/<thème>.json   les questions d'un quiz
 exercices/<matière>/          fiches d'exercices corrigés (PDF) et leurs scripts
 ```
@@ -18,7 +18,7 @@ exercices/<matière>/          fiches d'exercices corrigés (PDF) et leurs scrip
 Les adresses du site suivent la même logique :
 
 - `#/` : choix de la matière
-- `#/physique-chimie` : choix du thème
+- `#/physique-chimie` : choix du thème, puis les fiches d'exercices de la matière
 - `#/physique-chimie/dosages-spectres-ir` : le quiz (ce lien peut être partagé tel quel)
 
 ## Ajouter un quiz
@@ -65,13 +65,24 @@ Pour ajouter une matière, ajouter une entrée dans `matieres` avec un `id`, un 
 
 ## Fiches d'exercices
 
-Chaque fiche PDF du dossier `exercices/` est produite par le script Python du même nom, qui contient les énoncés et les corrigés. Pour la refaire après une modification :
+Chaque fiche PDF du dossier `exercices/` est produite par le script Python du même nom, qui contient les énoncés et les corrigés. Pour la refaire après une modification, lancer la commande indiquée en tête du script, par exemple :
 
 ```
 uv run --with reportlab --with matplotlib python exercices/maths/probabilites-loi-binomiale-serie-1.py
 ```
 
-Les fiches ne sont pas listées sur le site, mais on peut les ouvrir à leur adresse, par exemple <https://govitpowerz.github.io/revisions/exercices/maths/probabilites-loi-binomiale-serie-1.pdf>.
+Une fiche apparaît dans la section « Exercices » de la page de sa matière quand elle est déclarée dans `quiz/catalogue.json`, dans la liste `exercices` de cette matière :
+
+```json
+"exercices": [
+  {
+    "titre": "Probabilités, espérance, variance et loi binomiale : série 1",
+    "niveau": "Terminale spécialité",
+    "description": "Les cinq exercices de la série.",
+    "fichier": "exercices/maths/probabilites-loi-binomiale-serie-1.pdf"
+  }
+]
+```
 
 ## Tester sur son ordinateur
 
