@@ -46,6 +46,7 @@ Invariants that are not obvious from a single file:
 - `id` values are URLs and storage keys: the best score lives in `localStorage` under `revisions:best:<subject>/<topic>`. Renaming an id breaks shared links and orphans stored scores.
 - The per-category score split only appears when a quiz has at least two distinct `categorie` values.
 - A series PDF only appears on the site once it has an entry in the subject's `exercices` list; its `fichier` is a path relative to the site root.
+- `themes` is required on every subject, even empty; `exercices` is optional. A subject's home tile is a link as soon as it has a quiz or a series, and shows "Bientôt" when it has neither.
 
 ## Writing a quiz
 

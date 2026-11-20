@@ -145,10 +145,12 @@
     setCrumbs([]);
     const tiles = catalogue.matieres.map(m => {
       const n = m.themes.length;
+      const series = (m.exercices || []).length;
+      const meta = n || !series ? quizCount(n) : `${series} série${series > 1 ? 's' : ''} d'exercices`;
       const inner = `
         <span class="tile-title">${esc(m.titre)}</span>
-        <span class="tile-meta">${quizCount(n)}</span>`;
-      return n
+        <span class="tile-meta">${meta}</span>`;
+      return n || series
         ? `<li><a class="tile" href="#/${esc(m.id)}">${inner}</a></li>`
         : `<li><div class="tile empty">${inner}</div></li>`;
     }).join('');

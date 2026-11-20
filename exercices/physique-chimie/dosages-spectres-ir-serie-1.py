@@ -532,7 +532,7 @@ def content():
         Q(4, f"c<sub>D</sub> = A<sub>D</sub> / k = 0,140 / (2,2 × 10<super>3</super>) = 6,4 × 10<super>−5</super> "
              f"{ML}. La lecture graphique sur la droite d'étalonnage donne la même valeur."),
         Q(5, "m = c<sub>D</sub> × V × M = 6,4 × 10<super>−5</super> × 0,100 × 158 = 1,0 × 10<super>−3</super> g, "
-             "soit 1,0 mg pour 100 mL. C'est la valeur portée sur l'étiquette (0,0010 g) : l'écart est inférieur à "
+             "soit 1,0 mg pour 100 mL. C'est la valeur portée sur l'étiquette (0,0010 g) : l'écart est d'environ "
              "1 %, l'indication est vérifiée."),
         Q(6, "Non. L'absorbance 0,65 est très au-dessus de celle de la solution étalon la plus concentrée (0,220) : "
              "rien ne garantit que la proportionnalité reste valable dans ce domaine, et prolonger la droite serait "

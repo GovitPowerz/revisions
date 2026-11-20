@@ -136,7 +136,7 @@
         "9,5 g",
         "105 g"
       ],
-      "explication": "La densité d = 1,05 signifie que la masse volumique vaut 1,05 g·mL<sup>−1</sup> : 100 mL de solution pèsent 105 g. Le titre massique est la part de la masse de solution due au soluté : 0,10 × 105 = 10,5 g. Prendre 10 % de 100 g, c'est confondre volume et masse de solution ; 105 g est la masse de toute la solution.",
+      "explication": "La densité d = 1,05 signifie que la masse volumique vaut 1,05 g·mL<sup>−1</sup> : 100 mL de solution pèsent 105 g. Le titre massique est la part de la masse de solution due au soluté : 0,10 × 105 = 10,5 g. Prendre 10 % de 100 g, c'est confondre volume et masse de solution ; diviser ces 10 g par la densité au lieu de multiplier donne 9,5 g ; 105 g est la masse de toute la solution.",
       "indice": "Calcule d'abord la masse de 100 mL de solution."
     },
     {

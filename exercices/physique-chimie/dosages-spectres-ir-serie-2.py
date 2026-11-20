@@ -274,12 +274,14 @@ def caffeine_uv():
 
 
 def skeletal(smiles):
-    d = rdMolDraw2D.MolDraw2DCairo(560, 360)
+    """Same bond length and font size for every molecule: place the image with img(buf, dpi=SKELETAL_DPI)."""
+    d = rdMolDraw2D.MolDraw2DCairo(-1, -1)
     o = d.drawOptions()
     o.useBWAtomPalette()
     o.bondLineWidth = 2
-    o.minFontSize = 30
-    o.padding = 0.12
+    o.fixedBondLength = 60
+    o.fixedFontSize = 20
+    o.padding = 0.1
     d.DrawMolecule(Chem.MolFromSmiles(smiles))
     d.FinishDrawing()
     return io.BytesIO(d.GetDrawingText())
@@ -289,8 +291,23 @@ BUTANONE = [(2982, .38, 10), (2940, .25, 9), (2885, .15, 8), (1716, .93, 9), (14
             (1365, .55, 7), (1172, .62, 9), (1088, .25, 7), (945, .22, 7), (760, .2, 7)]
 BUTENOL = [(3340, .78, 110), (3080, .35, 10), (2940, .45, 15), (2880, .3, 10), (1642, .45, 8), (1430, .35, 9),
            (1050, .75, 12), (992, .55, 7), (915, .7, 7)]
-CAFFEINE = [(3105, .3, 12), (2955, .2, 12), (1700, .9, 9), (1658, .92, 10), (1600, .35, 8), (1550, .6, 8),
+CAFFEINE = [(3080, .3, 12), (2955, .2, 12), (1700, .9, 9), (1658, .92, 10), (1600, .35, 8), (1550, .6, 8),
             (1485, .4, 7), (1455, .35, 7), (1360, .4, 7), (1240, .5, 8), (1025, .3, 7), (975, .25, 7), (745, .45, 7)]
+
+
+def flasks():
+    fig, axs = plt.subplots(1, 2, figsize=(7.6, 2.6), sharey=True)
+    ir(axs[0], BUTANONE, "Flacon X")
+    ir(axs[1], BUTENOL, "Flacon Y", ylabel=False)
+    fig.tight_layout()
+    return fig
+
+
+def caffeine_ir():
+    fig, ax = plt.subplots(figsize=(4.6, 2.6))
+    ir(ax, CAFFEINE, "Caféine")
+    return fig
+
 
 IR_TABLE = [
     ["<b>Liaison</b>", "<b>Nombre d'onde (cm<super>−1</super>)</b>", "<b>Allure de la bande</b>"],
@@ -309,6 +326,7 @@ IR_TABLE = [
     ["C–O", "1050 – 1300", "forte"],
 ]
 
+SKELETAL_DPI = 110
 MGL = "mg·L<super>−1</super>"
 GL = "g·L<super>−1</super>"
 CM1 = "cm<super>−1</super>"
@@ -476,7 +494,7 @@ def content():
         table([["Solution", "E<sub>1</sub>", "E<sub>2</sub>", "E<sub>3</sub>", "E<sub>4</sub>", "E<sub>5</sub>"],
                [f"C<sub>m</sub> ({MGL})", "2,0", "4,0", "6,0", "8,0", "10,0"],
                ["Absorbance A à 273 nm", "0,101", "0,200", "0,302", "0,401", "0,502"]], 4.6 * cm, 2.2 * cm),
-        side_by_side([img(skeletal("Cn1cnc2c1c(=O)n(C)c(=O)n2C"), 5.2 * cm),
+        side_by_side([img(skeletal("Cn1cnc2c1c(=O)n(C)c(=O)n2C"), dpi=SKELETAL_DPI),
                       P("Figure 3. Formule topologique de la caféine.", "cap")],
                      [img(png(caffeine_uv()), 7.6 * cm),
                       P(f"Figure 4. Spectre d'absorption d'une solution de caféine à 10 {MGL}.", "cap")]),
@@ -588,7 +606,7 @@ def content():
         QC("La pipette jaugée délivre un volume connu avec précision : l'incertitude sur ρ vient alors surtout de la "
            "pesée."),
         Q(2, f"Chaque ajout de 25,0 {GL} de saccharose augmente ρ d'environ 9,6 {GL} : les points sont alignés sur "
-             f"une droite qui ne passe pas par l'origine. Par régression linéaire : ρ<sub>0</sub> = 998 {GL} et "
+             f"une droite qui ne passe pas par l'origine. Par régression linéaire : ρ<sub>0</sub> = 998,3 {GL} et "
              "b = 0,384."),
         QC("ρ<sub>0</sub> est la masse volumique de la solution sans sucre, c'est-à-dire de l'eau à 20 °C. Même sans "
            "soluté, un litre de solution a une masse : ρ ne peut donc pas être proportionnelle à C<sub>m</sub>, "
@@ -684,25 +702,11 @@ def content():
              "journée (café, thé, soda au cola) la ferait dépasser."),
         Q(8, "La caféine possède deux groupes carbonyle C=O, liés chacun à un atome d'azote : ce sont des groupes "
              f"amide. Bandes présentes : deux bandes fortes vers 1700 et 1660 {CM1} (C=O d'amide), et des bandes C–H "
-             f"faibles vers 2950 {CM1} (groupes méthyle) et 3100 {CM1} (C–H du cycle, porté par un carbone engagé "
+             f"faibles vers 2950 {CM1} (groupes méthyle) et 3080 {CM1} (C–H du cycle, porté par un carbone engagé "
              "dans une double liaison). Bandes absentes : aucune bande O–H ni N–H, car aucun atome d'azote ne porte "
              "d'hydrogène et la molécule n'a pas de groupe hydroxyle."),
     ])
     return EX, CO
-
-
-def flasks():
-    fig, axs = plt.subplots(1, 2, figsize=(7.6, 2.6), sharey=True)
-    ir(axs[0], BUTANONE, "Flacon X")
-    ir(axs[1], BUTENOL, "Flacon Y", ylabel=False)
-    fig.tight_layout()
-    return fig
-
-
-def caffeine_ir():
-    fig, ax = plt.subplots(figsize=(4.6, 2.6))
-    ir(ax, CAFFEINE, "Caféine")
-    return fig
 
 
 # ---------------------------------------------------------------- document
